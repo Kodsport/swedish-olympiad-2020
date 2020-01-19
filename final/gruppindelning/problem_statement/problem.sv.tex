@@ -1,0 +1,55 @@
+\problemname{Gruppindelning}
+Matteläraren Maria tänker dela in sina elever i två grupper under nästa lektion.
+Därför ställs hon nu inför ett vanligt problem: hur delar man in elever i två grupper på ett vettigt sätt?
+Det finns $n$ elever i klassen, och klassrummet har $n$ stolar, numrerade från $1$ till $n$.
+När en elev anländer till klassrummet så sätter den sig alltid på den lediga stolen som är längst till vänster.
+Så om totalt $k$ personer dyker upp en viss dag så kommer de alltid att sitta på stolarna $1,2,...,k$.
+
+För att dela in eleverna i två grupper har Maria en viss strategi som hon vill använda.
+Innan lektionen börjar väljer hon en sekvens $s$ av $n$ st ettor och tvåor.
+När lektionen har börjat så går hon till varje elev och låter eleven som sitter på stol $i$ hamna i grupp $s_i$.
+För att gruppindelningen ska bli vettig så finns det två krav som $s$ måste uppfylla:
+
+\begin{enumerate}
+  \item Maria vet inte hur många elever som kommer, men oavsett hur många som dyker upp så ska skillnaden i storlek mellan de två grupperna vara högst $1$.
+
+  \item Det finns $m$ par av stolar som har samma färg. Om det sitter elever på ett sådant par av stolar så måste de hamna i samma grupp.
+\end{enumerate}
+
+Din uppgift är att, givet $n,m$ och de $m$ paren av stolar, hitta den sekvens $s$ som kommer först i alfabetisk ordning och uppfyller kraven ovan.
+Om det inte finns något giltigt $s$ ska ditt program skriva ut $-1$.
+
+Med alfabetisk ordning menas att man jämför två sekvenser genom att primärt kolla på det första tecknet, om det är samma kollar man på det andra, o.s.v.
+T.ex. kommer sekvensen \texttt{1122} före \texttt{1211}, men efter \texttt{1112}.
+
+\section*{Indata}
+Den första raden innehåller två heltal $1\leq n \leq 10^5$, antalet stolar i klassrummet och $0\leq m \leq n/2$, antalet stolpar med samma färg.
+Därefter följer $m$ rader som vardera består av två heltal, de par av stolar som har samma färg (1-indexerat).
+Varje stol har samma färg som högst en annan.
+
+\section*{Utdata}
+Skriv ut en sekvens med $n$ ettor eller tvåor (utan mellanslag), alternativt $-1$ om det saknas en giltig lösning.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Grupp & Poängvärde & Gränser \\ \hline
+1     & 12         & $n \leq 15$\\ \hline
+2     & 23         & $n \leq 40$ \\ \hline
+3     & 25         & Stol $i$ kan bara ha samma färg som stol $i\pm 1$ \\ \hline
+4     & 40         & Inga ytterligare begränsningar \\ \hline
+\end{tabular}
+
+\section*{Förklaring av exempelfall 1}
+Om det bara kommer två personer så måste de vara i olika grupper.
+Alltså måste stol $1$ och stol $2$ vara i olika grupp, men vi vet också att stol $3$
+måste vara i samma grupp som stol $2$. Om det kommer fyra personer måste därför stol $4$
+vara i samma grupp som stol $1$ för att grupperna ska bli lika stora. Men stol $4$ måste
+vara i samma grupp som stol $5$. Om vi fortsätter på samma sätt får vi att stol $1, 4$
+och $5$ måste vara i samma grupp, medan stol $2, 3, 6$ och $7$ är i den andra gruppen.
+Det finns alltså två lösningar: $1221122$ och $2112211$. Den alfabetiskt minsta av
+dessa är $1221122$.
