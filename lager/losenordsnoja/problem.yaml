@@ -1,0 +1,10 @@
+author: Nils Gustafsson
+source: Programmeringsolympiadens läger 2020
+rights_owner: Programmeringsolympiaden
+license: cc by-sa
+type: scoring
+validation: custom
+grading:
+    show_test_data_groups: yes
+limits:
+    time_multiplier: 8
