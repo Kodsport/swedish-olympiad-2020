@@ -1,0 +1,6 @@
+  
+source: Programmeringsolympiadens KATT-tävling 2020 # The XXXI All-Russian Olympiad in Informatics, http://neerc.ifmo.ru/school/archive/2018-2019/ru-olymp-roi-2019-day1.pdf
+license: permission
+type: scoring
+grading:
+    show_test_data_groups: yes

@@ -1,0 +1,70 @@
+\problemname{Tågresan}
+En grupp personer ska åka tåg och funderar hur de ska sitta.
+$M$ par av personerna är vänner och vill sitta så nära varandra som möjligt.
+Tågvagnen de ska sitta i har $N$ rader och är utformad som ett $N \times 4$ rutnät, med 4 platser på varje rad.
+Det finns $4N$ personer i gruppen.
+Personerna är numrerade $1$ till $4N$.
+
+Varje par av vänner som sitter på platser med euklidiskt avstånd $L = \sqrt{dx^2 + dy^2}$
+bidrar med $1/L^2$ till gruppens totala lycka.
+Din uppgift är att placera ut personerna så att gruppens lycka blir så stor som möjligt.
+
+\section*{Indata}
+Indatan består av $10$ testfall.
+
+Den första raden innehåller talet $T$ ($0 \le T \le 10$), som beskriver numret på testfallet ($0$ för sample).
+Den andra raden innehåller talen $N$ och $M$ ($1 \le N \le 25\,000$, $1 \le M \le 100\,000$) -- antalet rader i tågvagnen samt antalet par av vänner.
+De följande $M$ raderna innehåller två heltal $a$ och $b$ ($1 \le a,b \le 4N$, $a \ne b$) -- nummer för två vänner.
+
+\section*{Utdata}
+Skriv ut $N$ rader med 4 heltal på varje.
+Varje rad ska innehålla nummer för de fyra personer som sitter på den raden.
+Alla personer ska placeras ut någonstans.
+
+\section*{Poängsättning}
+Ditt program kommer att testas på $10$ testfall, och poängsättas baserat på hur det står sig relativt \emph{alla andra deltagare}.
+Om din inskickning på ett givet testfall får en summa av lycka som är $X$, och den bästa summan någon har uppnått på det testfallet är $Y$,
+så blir din poäng på det testfallet $10 \cdot (X / Y)^2$, avrundat till två decimaler.
+
+Din poäng för en inskickning är summan av poängen för testfallen, och din totala poäng är poängen för den bästa inskickningen.
+Det går alltså inte att kombinera testfall mellan olika inskickningar, utan du måste skicka in ett enda program som
+maximerar din poäng på alla testfall samtidigt.
+
+Under själva tävlingen kommer din poäng sättas relativt en domarlösning;
+efter att den slutat kommer alla lösningar att rättas om mot de bästa deltagarlösningarna.
+Om din lösning är bättre än den domarna slängt ihop är det därmed möjligt att du tillfälligt får mer än $10$ poäng på ett testfall.
+Din (temporära) totalpoäng kommer dock att begränsas till $100$.
+
+Sampletestfallet kommer alltid att ge $0$ poäng.
+
+
+\section*{Förklaring av exampelfall}
+I exempelfallet vill vi placera ut 8 personer i ett $2 \times 4$ rutnät.
+Exempellösningen optimerar avståndet för alla vänskapsrelationer utom 1 och 4 som sitter på avstånd $\sqrt 3$ från varandra.
+Summan av lycka blir $4 \cdot 1/1 + 1/3 \approx 4.33$.
+
+En bättre lösning kan fås till så att alla par av vänner sitter på avstånd 1.
+Om det testfallet have varit ett riktigt testfall och en annan deltagare hade genererat denna lösning
+(total lycka $5$) så hade testfallet getts $10 \cdot (4.33 / 5)^2 \approx 7.51$ poäng.
+
+\section*{Testfall}
+Här är beskrivningar av de $10$ testfallen som förekommer:
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Testfall & Gränser                       & Beskrivning av testfall \\ \hline
+$1$       & $N = 10$, $M = 100$           & Alla kanter är genererade slumpmässigt. \\ \hline
+$2$       & $N = 100$, $M = 500$          & Alla kanter är genererade slumpmässigt. \\ \hline
+$3$       & $N = 100$, $M = 8\,000$       & Alla kanter är genererade slumpmässigt. \\ \hline
+$4$       & $N = 8\,000$, $M \le 45\,000$ & $G$ är uppbyggd av grupper av vänner i storlek $1$-$5$ där alla känner alla. \\ \hline
+$5$       & $N = 2\,500$, $M = 8\,000$    & $G$ innehåller inga cykler. Det maximala avståndet i $G$ är $2$. \\ \hline
+$6$       & $N = 2\,500$, $M = 9\,800$    & $G$ innehåller inga cykler. Det maximala avståndet i $G$ är $2$. \\ \hline
+$7$       & $N = 2\,500$, $M = 9\,999$    & $G$ innehåller inga cykler. \\ \hline
+$8$       & $N = 25\,000$, $M = 99\,999$  & $G$ innehåller inga cykler. \\ \hline
+$9$       & $N = 10\,000$, $M = 100\,000$ & Alla kanter är genererade slumpmässigt. \\ \hline
+$10$      & $N = 25\,000$, $M = 100\,000$ & Alla kanter är genererade slumpmässigt. \\ \hline
+\end{tabular}
+
+Med slumpmässig menas här \href{https://sv.wikipedia.org/wiki/Likformig_sannolikhetsf\%C3\%B6rdelning}{likformigt slumpmässig}. 
+Grafen av vänskapsrelationer kallas $G$ i vissa av beskrivningarna.
