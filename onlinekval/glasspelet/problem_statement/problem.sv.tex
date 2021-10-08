@@ -1,0 +1,60 @@
+\problemname{Glasspelet}
+Kirderf och Slin har kommit tidigt till en stor fest där glass serveras till alla.
+Just nu är de ensamma i festlokalen där alla $N$ glassar är uppställda på en lång rad på ett bord.
+Den finns $K$ olika slags glassar, där varje sort representeras av ett heltal mellan $0$ och $K-1$.
+
+Slin och Kirderf är väldigt sugna på glass och tänker därför spela ett spel där de äter av glassarna.
+De gör vartannat drag, där ett drag går ut på att äta exakt en glass.
+När som helst kan festens organisatörer komma in i rummet, och då får det inte vara för
+uppenbart att Kirderf och Slin har ätit av glassarna. Därför kan de endast välja att
+äta glassen längst till vänster eller längst till höger, så att det inte blir några mellanrum
+i raden med glassar. Dessutom måste det alltid finnas minst en av varje glassort kvar,
+annars är det ju uppenbart att någon har ätit. Den som inte kan göra något drag förlorar.
+
+Kirderf vill absolut inte förlora mot Slin, därför har han bett dig skriva ett program som avgör vem som har en vinnande
+strategi vid olika tillstånd av spelet. Du kommer få $Q$ st frågor, där varje fråga är ett intervall $[L,R]$, och 
+ditt program ska avgöra vem som har en vinnande strategi om bara glass nummer $L, L+1, \dots, R$ är kvar (glassarna
+är numrerade från $1$ till $N$ från vänster till höger).
+
+Att en spelare har en vinnande strategi innebär att den spelaren alltid kan se till att vinna spelet,
+oavsett vilka drag motståndaren gör. Det går att bevisa att någon av Kirderf eller Slin alltid har en vinnande strategi.
+
+\section*{Indata}
+Den första raden innehåller tre heltal $N$, $K$, $Q$ ($1 \le K \le N \le 2 \times 10^5$, $1 \le Q \le 10^5$),
+Den andra raden innehåller $N$ heltal, alla mellan $0$ och $K-1$.
+Dessa beskriver hur raden med glassar ser ut. Varje glassort förekommer minst en gång.
+De följande $Q$ raderna innehåller två heltal $L_i$ och $R_i$ ($1 \le L_i \le R_i \le N$).
+
+
+\section*{Utdata}
+Skriv ut $Q$ rader med ett heltal för varje fråga. Om den spelare som börjar vid tillståndet $[L_i, R_i]$ har en 
+vinnande strategi, skriv ut $1$. Om den andra spelaren har en vinnande strategi, skriv ut $2$. Om tillståndet inte 
+är giltigt, dvs om varje glassort inte finns i intervallet, skriv ut $0$.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Grupp & Poängvärde & Gränser \\ \hline
+1     & 9          &  $N,Q \le 15$.\\ \hline
+2     & 11         &  $N,Q \le 100$. \\ \hline
+3     & 17         &  $N,Q \le 1000$. \\ \hline
+4     & 5          &  $K=1$. \\ \hline
+5     & 7          &  $K=2$. \\ \hline
+6     & 11         &  $R_i - L_i + 1 \le K+1$ för alla $1 \le i \le Q$. \\ \hline
+7     & 23         &  $Q=1$, $L_1=1, R_1=N$ \\ \hline
+8     & 17         &  Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+\section*{Förklaring av sample}
+I tillståndet $[1,5]$ (dvs alla $5$ glassar är kvar) har den andra spelaren en vinnande strategi. 
+Oavsett vad den första spelaren gör har den andra spelaren ett möjligt drag, och efter det finns bara $3$ glassar kvar
+vilket innebär att den första spelaren förlorar.
+
+I tillståndet $[1,4]$ har den första spelaren en vinnande strategi, nämligen att ta bort glass nummer $1$.
+
+Tillståndet $[1,3]$ är inte giltigt eftersom ingen glass av sort $2$ finns bland de tre första.
+

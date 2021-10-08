@@ -1,0 +1,38 @@
+\problemname{Cykeltävlingen}
+Du och dina kompisar har bildat ett lag som ska delta i en löpartävling. Tävlingen har lite speciella regler.
+Man får nämligen använda en cykel, men bara en per lag. Medlemmarna i laget kan alltså turas om att använda cykeln, och kan
+när som helst hoppa av den så att de som kommer bakom kan använda den istället. Det är inte tillåtet för cykeln att färdas bakåt. 
+
+Tiden för ett lag räknas när den sista medlemmen går i mål. I ert lag är ni $N$ personer. Person nummer $i$ springer med en 
+konstant hastighet $s_i$ meter/sekund, och cyklar med en konstant hastighet $c_i$ meter/sekund. Loppet är $L$ meter långt.
+Hur snabbt kan ni ta er i mål, om ni använder cykeln optimalt?
+
+\section*{Indata}
+På första raden står de två heltalen $N$ och $L$ ($2 \leq N \leq 10$, $1 \leq L \leq 10^5$).
+På de $N$ följande raderna står två heltal vardera: $s_i$ och $c_i$ ($1 \leq s_i, c_i \leq 100$).
+
+\section*{Utdata}
+Programmet ska skriva ut ett decimaltal: den minimala tiden som laget kan ta sig i mål (i sekunder).
+Svaret anses korrekt om det skiljer sig från det rätta svaret med högst $10^{-2}$.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på fem olika testfall.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  Fall & Poängvärde & Gränser \\ \hline
+  $1$    & $20$        &  $N = 2$ \\ \hline 
+  $2$    & $20$        &  Alla $s_i$ är samma, och alla $c_i$ är samma \\ \hline 
+  $3$ & $20$        &  Inga ytterligare begränsningar. \\ \hline
+  $4$    & $20$        &  Inga ytterligare begränsningar. \\ \hline
+  $5$    & $20$        &  Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+\section*{Exempelförklaring}
+I det första exemplet är en lösning att låta den första personen cykla de första $8$ meterna, och sen springa resten. Person nummer $2$
+kan då springa de första $8$ meterna och sen cykla sista biten. Person nummer $3$ springer hela vägen. Notera att person nummer $3$ har
+högre springhastighet än cykelhastighet.
+
+I det andra exemplet består laget av en elitlöpare, en elitcyklist, en PO-arrangör, och en struts. Lösningen bygger på att låta PO-arrangören
+cykla en stor del av tiden.

@@ -1,0 +1,43 @@
+\problemname{Godishalsbandet}
+Alice vill dela ett godishalsband med Bob.
+Halsbandet består av vita och blåa godisar.
+För att vara rättvis vill Alice dela halsbandet i två
+delar med lika många godisbitar i varje.
+Dock gillar Alice de blåa godisarna mycket mer än de vita,
+och vill därför få så många blåa godisar i sin halva som möjligt.
+
+Vad är det största antalet blåa godisar Alice kan få i sin del,
+om hon klipper halsbandet optimalt?
+
+\section*{Indata}
+Indatan består av en rad med en sträng som beskriver halsbandet.
+Strängen består endast av bokstäverna \texttt{B} och \texttt{V},
+och har totalt ett jämnt antal bokstäver.
+
+\section*{Utdata}
+Skriv ut en rad med ett heltal, det maximala antalet blåa godisar Alice
+kan få i sin del av halsbandet.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Grupp & Poängvärde & Gränser \\ \hline
+$1$   & $20$       & Halsbandet ser ut som på \href{https://www.progolymp.se/2020/affisch.pdf}{affischen} \\ \hline
+$2$   & $40$       & Halsbandet består av högst $1\,000$ godisar\\ \hline
+$3$   & $40$       & Halsbandet består av högst $1\,000\,000$ godisar \\ \hline
+\end{tabular}
+
+\section*{Förklaring av exempelfall 1}
+BBVVBVVVBB har längd 10 så Alice måste dela halsbandet i två delar med 5 godisar i varje.
+De möjliga delarna hon kan få är BBVVB, BVVBV, VVBVV, VBVVV, BVVVB, VVVBB, VVBBB, VBBBB, BBBBV, BBBVV.
+Hon får mest blåa godisar genom att välja VBBBB eller BBBBV som har $4$ blåa godisar.
+
+\begin{figure}[h]
+	\centering
+\includegraphics[width=0.5\textwidth]{sample1}
+\caption{Ett av två optimala sätt att klippa i exempelfall 1}
+\end{figure}

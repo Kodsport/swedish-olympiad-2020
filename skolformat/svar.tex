@@ -1,0 +1,283 @@
+\documentclass[a4paper,12pt,oneside]{amsbook}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+%\usepackage{euler}
+%\usepackage{garamond}
+
+\usepackage{newcent}
+%\fontfamily{fxm}\selectfont
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% Detta paket skoter grafiken
+\usepackage[dvips]{graphicx}
+%\usepackage[pdftex]{graphicx}
+\usepackage{tabularx}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage[swedish]{babel}
+% For bortkommentering
+\usepackage{verbatim}
+% For att slippa indentering av Sections och SubSections
+\usepackage{indentfirst}
+
+% Har stalls paragrafindentering och avstand mellan stycken och rader mm
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\baselineskip}{12pt}
+% Har definieras sidan
+\setlength{\voffset}{-15mm}
+\setlength{\hoffset}{-5.5mm}
+
+\setlength{\topmargin}{0mm}
+\setlength{\headheight}{10mm}
+\setlength{\headsep}{8mm}
+\setlength{\footskip}{16mm}
+
+\setlength{\evensidemargin}{0mm}
+\setlength{\oddsidemargin}{0mm}
+
+\setlength{\marginparsep}{0mm}
+\setlength{\marginparwidth}{0mm}
+
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{225mm}
+\setlength{\paperwidth}{210mm}
+\setlength{\paperheight}{297mm}
+\setlength{\headwidth}{170mm}
+% Huvud och Fot
+%\fancypagestyle{}{
+\fancyhf{}\fancyhead[c]{\small{\textit{Svar och rättningsanvisningar
+      till Programmeringsolympiadens skolkval 2020}}}
+\fancyfoot[c]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\newenvironment{lista}
+{\begin{itemize}
+\setlength{\parindent}{0pt}
+\setlength{\itemsep}{6pt}}
+{\end{itemize}}
+% Uppgifter
+\newcounter{probnr}
+\newenvironment{tal}{%
+\begin{list}
+%{\textbf{\arabic{section}.\arabic{probnr}}} {\usecounter{probnr}
+{\textbf{\arabic{probnr}}} {\usecounter{probnr}
+\setlength{\leftmargin}{0mm}
+\setlength{\rightmargin}{0mm}
+\setlength{\labelwidth}{-1mm}
+\setlength{\labelsep}{1mm}}
+\setlength{\itemsep}{6pt}
+}{\end{list}}
+% Definition av avsnitt: FAKTA, EXEMPEL, PASTAENDE
+\newtheorem{fakta}{Fakta}
+\newtheorem{exempel}{Exempel}
+\newtheorem{problem}{Problem}
+%
+\newtheoremstyle{test}% NAME
+{20pt}      % ABOVESPACE
+{10pt}      % BELOWSPACE
+{\sffamily} % BODYFONT
+{0pt}       % INDENT
+{\scshape}  % HEADFONT
+{}          % HEADPUNCT
+{\newline}  % HEADSPACE
+{}          % CUSTOM-HEAD-SPEC
+
+\theoremstyle{test}
+\newtheorem{program}{Program}
+\newcommand{\sv}[1]{\textsc{#1}}            % Sma versaler
+\newcommand{\fe}[1]{\textbf{#1}}            % FET
+\newcommand{\ku}[1]{\textit{#1}}            % KURSIV
+\newcommand{\cu}[1]{\texttt{#1}}            % Courier
+\newcommand{\sk}[1]{\texttt{#1}}            % Courier
+\newcommand{\rubrik}[1]{\begin{center}\sf\huge{#1}\normalsize\rm\end{center}}
+\begin{document}
+%\DeclareGraphicsExtensions{.jpg,.pdf,.mps,.png,.eps}
+
+
+\specialsection*{Svar och rättningsanvisningar}
+\thispagestyle{fancy}
+\lhead{}
+\begin{itemize}
+%\setlength\itemsep{0.2cm}
+\item Läs igenom \textit{tävlingsreglerna}.
+\item Programmen tas i tur och ordning in i editorn och kompileras.
+Uppstår kompileringsfel betraktas programmet som felaktigt och lösningen
+ges $0$ poäng.
+\item Programmet körs med givna indata enligt nedan. Alternativt, om eleven förberett programmet för det, kan de bifogade indatafilerna användas istället.
+\item Varje testfall
+  med korrekt svar ger 1 poäng.
+\item
+Totalt kan man
+  alltså få 5 poäng för varje uppgift.
+\item Om exekveringstiden för ett testexempel, kört på en modern dator,
+\textit{överskrider 3 sekunder} betraktas körningen av testexemplet som felaktigt.
+\item Det kan vara viktigt att programmet körs i en miljö liknande den som
+programmet utvecklats i, samma version av kompilator eller
+interpretator.
+\item Vid problem i samband med rättningen är det viktigt att det sunda
+förnuftet får råda!
+\item Ett förslag till rättningsprocedur kan vara att låta eleven
+sitta vid datorn.
+\end{itemize}
+
+\vspace{2cm}
+
+\subsection*{Uppgift 1 -- Öar}
+~\\
+{\tt 
+\begin{tabular}{||l||c||c||}\hline\hline
+& {\fe{Indata}} & \fe{Utdata} \\ \hline \hline
+\fe{Test 1} & 6 & 4 \\ \hline
+\fe{Test 2} & 45 & 8 \\ \hline
+\fe{Test 3} & 777 & 14 \\ \hline
+\fe{Test 4} & 1597 & 16 \\ \hline
+\fe{Test 5} & 6764 & 18 \\ \hline\hline
+\end{tabular}
+}
+%$$
+
+
+\subsection*{Uppgift 2 -- Tebryggning}
+
+
+
+~\\
+{\tt 
+\begin{tabular}{||l||c|c|c|c|c|c|c|c|c|c|c|c||c||}\hline\hline 
+& \multicolumn{12}{c||}{\fe{Indata}} & \fe{Utdata} \\ 
+& $K$ & $N$ & $x_1$ & $x_2$ & $x_3$ & $x_4$&$x_5$ & $x_6$& $x_7$& $x_8$& $x_9$& $x_{10}$& \\ \hline \hline
+\fe{Test 1} &1 & 53 & 87 &&&&&&&&&& 6  \\ \hline 
+\fe{Test 2} &5 & 20 & 8 &4& 7 &4 &5 &&&&&& 3  \\ \hline 
+\fe{Test 3} &5 & 64 & 27& 4 &22 &12 &1 &&&&&& 9  \\ \hline 
+\fe{Test 4} &6 & 60 & 9& 6& 5 &12 &3 &33 &&&&& 7  \\ \hline 
+\fe{Test 5} &10 & 60 & 25& 3 &11 &4 &5 &12& 6& 3& 2& 3 & 8  \\ \hline
+\hline
+\end{tabular}
+}
+
+
+
+
+\subsection*{Uppgift 3 -- Zoo}
+
+
+~\\
+{\tt 
+\begin{tabular}{||l||c|c|c|l||r||}\hline\hline
+& \multicolumn{4}{c||}{\fe{Indata}} & \fe{Utdata} \\
+& Burar & Djurarter & Antal grupper & Grupper & \\ \hline \hline
+\fe{Test 1} & 9 & 5 & 0 && 327680 \\ \hline
+\fe{Test 2} & 5 & 4 & 2 & AB & 84 \\
+&&&&BC & \\ \hline
+\fe{Test 3} & 10 & 5 & 3 & ABD & 288 \\
+&&&&CEA & \\ 
+&&&&BC & \\ \hline
+\fe{Test 4} & 15 & 8 & 1 & ABCDEF & 1921495802\\ \hline
+\fe{Test 5} & 15 & 10 & 4 & HEJA & 1802495586 \\
+&&&&DIG & \\ 
+&&&&BAD & \\ 
+&&&&BIGFACE & \\ \hline \hline
+\end{tabular}
+}
+   
+
+\subsection*{Uppgift 4 -- Planet X}
+
+
+~\\
+{\tt 
+\begin{tabular}{||l||c|c|l||l||}\hline\hline
+& \multicolumn{3}{c||}{\fe{Indata}} & \fe{Utdata} \\
+& $N$ & $M$ & Rader & \\ \hline \hline
+\fe{Test 1} & 1 & 10 &	9...5.5..8  	&	98765.5678	\\ \hline
+\fe{Test 2} & 3 & 3 & 0.2	&	012	\\
+&&&	1..	&	12.	\\
+&&&	.3.	&	23.	\\ \hline
+\fe{Test 3} & 6 & 7 & 5....7.	&	5678.7.	\\
+&&&	...9...	&	6789876	\\
+&&&	.......	&	...8765	\\
+&&&	..77...	&	..77654	\\
+&&&	5.....3	&	5.66543	\\
+&&&	..5....	&	..5....	\\ \hline
+\fe{Test 4} & 4 & 8 &	7...3..6	&	76543456	\\
+&&&	........	&	87654...	\\
+&&&	9..6....	&	987654..	\\
+&&&	.....3.4	&	876543.4	\\ \hline
+\fe{Test 5} & 8 & 8 &	........	&	........	\\
+&&&	...223..	&	54322345	\\
+&&&	6....4..	&	65433456	\\
+&&&	.......7	&	...44567	\\
+&&&	...5....	&	...5.456	\\
+&&&	8....3..	&	87654345	\\
+&&&	........	&	7.......	\\
+&&&	6...3..6	&	6...3456    	\\ \hline \hline
+\end{tabular}
+}
+
+
+\subsection*{Uppgift 5 -- Planetbacke}
+~\\
+{\tt 
+\begin{tabular}{||l||c|c|l||c||}\hline\hline
+& \multicolumn{3}{c||}{\fe{Indata}} & \fe{Utdata} \\
+& $N$ & $M$ & Rader & \\ \hline \hline
+\fe{Test 1} & 3 & 3 & 101 & 7 \\ 
+&&&	102 &\\
+&&&	021 &\\ \hline
+\fe{Test 2} & 6 & 6 & 571926 & 9 \\
+&&&	462817 &\\
+&&&	103458 &\\
+&&&	728291 &\\
+&&&	061746 &\\
+&&&	454915 &\\ \hline
+\fe{Test 3} & 5 & 6 & 313044 & 11 \\
+&&&	304200 &\\
+&&&	320554 &\\
+&&&	121504 &\\
+&&&	452210 &\\ \hline
+\fe{Test 4} & 7 & 6 & 999766 & 30 \\
+&&&	988876 &\\
+&&&	878764 &\\
+&&&	766532 &\\
+&&&	754230 &\\
+&&&	452210 &\\
+&&&	522200 &\\ \hline
+\fe{Test 5} & 7 & 7 & 0011334 & 38 \\
+&&&	0112345 &\\
+&&&	0032456 &\\
+&&&	2324567 &\\
+&&&	3466888 &\\
+&&&	3678999 &\\
+&&&	5668999 &\\ \hline\hline
+\end{tabular}
+}
+
+
+\newpage
+\subsection*{Uppgift 6 -- Cykeltävling}
+~\\
+{\tt 
+\begin{tabular}{||l||c|c||c|c||c|c||c|c||c|c||}\hline\hline
+& \multicolumn{2}{c||}{\fe{Test 1}} & \multicolumn{2}{c||}{\fe{Test 2}}& \multicolumn{2}{c||}{\fe{Test 3}} & \multicolumn{2}{c||}{\fe{Test 4}} & \multicolumn{2}{c||}{\fe{Test 5}} \\\hline\hline
+Antal & \multicolumn{2}{c||}{ 7 }& \multicolumn{2}{c||}{ 2} & \multicolumn{2}{c||}{ 5} & \multicolumn{2}{c||}{ 10}& \multicolumn{2}{c||}{ 10}\\ \hline
+Längd& \multicolumn{2}{c||}{ 42195 }& \multicolumn{2}{c||}{ 30000} & \multicolumn{2}{c||}{ 30000} & \multicolumn{2}{c||}{ 91080}& \multicolumn{2}{c||}{ 100000}\\ \hline
+& \fe{$s_i$} & \fe{$c_i$} & \fe{$s_i$} & \fe{$c_i$}& \fe{$s_i$} & \fe{$c_i$}& \fe{$s_i$} & \fe{$c_i$}& \fe{$s_i$} & \fe{$c_i$} \\ \hline
+Person 1	&	5	&	10	&	10	&	13	&	30	&	70	&	65	&	35	&	1	&	10	\\
+Person 2	&	5	&	10	&	9	&	14	&	40	&	60	&	35	&	54	&	2	&	11	\\
+Person 3	&	5	&	10	&		&		&	40	&	60	&	30	&	83	&	3	&	12	\\
+Person 4	&	5	&	10	&		&		&	50	&	100	&	44	&	76	&	4	&	13	\\
+Person 5	&	5	&	10	&		&		&	50	&	40	&	25	&	56	&	5	&	14	\\
+Person 6	&	5	&	10	&		&		&		&		&	48	&	78	&	6	&	15	\\
+Person 7	&	5	&	10	&		&		&		&		&	19	&	63	&	7	&	16	\\
+Person 8	&		&		&		&		&		&		&	16	&	86	&	8	&	17	\\
+Person 9	&		&		&		&		&		&		&	21	&	69	&	9	&	18	\\
+Person 10	&		&		&		&		&		&		&	43	&	56	&	10	&	19	\\ \hline\hline
+\fe{Utdata:} & \multicolumn{2}{c||}{ 7836.2143 }& \multicolumn{2}{c||}{ 2684.8249} & \multicolumn{2}{c||}{ 692.3077} & \multicolumn{2}{c||}{ 3662.0215}& \multicolumn{2}{c||}{ 37500.0000} \\ \hline\hline
+\end{tabular}
+}
+
+OBS! På denna uppgift får den tävlandes svar skilja sig med $\pm 0.01$ från ovanstående.
+\end{document}
+
+

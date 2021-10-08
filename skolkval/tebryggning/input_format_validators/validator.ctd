@@ -1,0 +1,9 @@
+INT(1, 10, k) SPACE INT(1, 100, n) NEWLINE
+SET(s = 0)
+REP(k, SPACE)
+	INT(1,100,a)
+	SET(s = s + a)
+END
+NEWLINE
+ASSERT(s >= n)
+EOF

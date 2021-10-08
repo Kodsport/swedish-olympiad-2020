@@ -1,0 +1,34 @@
+\problemname{TV-tittande}
+Bobs vänner älskar TV-serier och brukar diskutera dem på sina födelsedagskalas. Bob känner sig ofta utfryst för att han inte har kollat på samma serier som dem.
+
+Bob är bjuden på kalas vissa dagar och tänker gå på alla dessa. Han vet vilka TV-serier som kommer diskuteras under varje kalas, och vill ha sett klart de serierna för att kunna diskutera dem med sina vänner. Bob vill inte titta på TV i mer än tio timmar per dag, och han har inte tid att titta på TV på samma dag som han är på ett kalas.
+
+Han kan när som helst pausa en TV-serie och fortsätta titta på den någon annan gång, men när han är på ett kalas där serien diskuteras måste han ha sett klart hela. Kan Bob lyckas med det?
+
+\section*{Indata}
+På första raden finns de två heltalen $n$ och $k$ ($1 \leq n,k \leq 2 \times 10^5$), antalet kalas och antalet TV-serier som finns. TV-serierna är numrerade från $1$ till $k$.
+
+På nästa rad finns $k$ heltal, där det $i$:te talet är längden av TV-serie nummer $i$ mätt i timmar. Ingen serie är längre än $10^6$ timmar.
+
+De följande $n$ raderna beskriver kalasen i ordning. Rad $i$ börjar med två heltal $1 \leq d_i \leq 2 \times 10^5$ och $c_i \ge 1$, vilken dag kalaset är och antalet TV-serier som kommer att diskuteras. Sedan följer $c_i$ olika heltal på samma rad, de TV-serier som kommer diskuteras på kalaset. Summan av alla $c_i$ är inte större än $2 \times 10^5$.
+
+Bob är inte bjuden till mer ett kalas någon dag. Det är nu morgon dag $0$ och Bob ska alltså inte på kalas idag.
+
+\section*{Utdata}
+Skriv ut \texttt{Ja} om det är möjligt att se klart TV-serierna i tid till evenemangen där de diskuteras. Skriv ut \texttt{Nej} om det inte är möjligt.
+
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Grupp & Poängvärde & Gränser \\ \hline
+$1$   & $40$       & $n \leq 50$, $k \leq 50$ \\ \hline
+$2$   & $20$       & $n \leq 3000$, $k \leq 3000$ \\ \hline
+$3$   & $40$       & Inga ytterligare begränsningar. \\ \hline
+\end{tabular}
+
+\section*{Förklaring av exempelfall 1}
+Första kalaset är om två dagar, och där ska den 20 timmar långa TV-serien diskuteras. Eftersom Bob tänker titta på TV i tio timmar per dag hinner han som tur är precis se den i tid. Sedan får han en ledig dag till nästa kalas så att han precis hinner se serie 3 och 4 på fem timmar var. På den femte dagen räcker det att Bob tittar på serie 1 eftersom han redan har sett serie 2.
