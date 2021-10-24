@@ -20,7 +20,7 @@ Att en spelare har en vinnande strategi innebär att den spelaren alltid kan se 
 oavsett vilka drag motståndaren gör. Det går att bevisa att någon av Kirderf eller Slin alltid har en vinnande strategi.
 
 \section*{Indata}
-Den första raden innehåller tre heltal $N$, $K$, $Q$ ($1 \le K \le N \le 2 \times 10^5$, $1 \le Q \le 10^5$),
+Den första raden innehåller tre heltal $N$, $K$, $Q$ ($1 \le K \le N \le 2 \times 10^5$, $1 \le Q \le 10^5$).
 Den andra raden innehåller $N$ heltal, alla mellan $0$ och $K-1$.
 Dessa beskriver hur raden med glassar ser ut. Varje glassort förekommer minst en gång.
 De följande $Q$ raderna innehåller två heltal $L_i$ och $R_i$ ($1 \le L_i \le R_i \le N$).
@@ -39,17 +39,17 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \begin{tabular}{| l | l | l |}
 \hline
 Grupp & Poängvärde & Gränser \\ \hline
-1     & 9          &  $N,Q \le 15$.\\ \hline
-2     & 11         &  $N,Q \le 100$. \\ \hline
-3     & 17         &  $N,Q \le 1000$. \\ \hline
-4     & 5          &  $K=1$. \\ \hline
-5     & 7          &  $K=2$. \\ \hline
-6     & 11         &  $R_i - L_i + 1 \le K+1$ för alla $1 \le i \le Q$. \\ \hline
+1     & 9          &  $N,Q \le 15$\\ \hline
+2     & 11         &  $N,Q \le 100$ \\ \hline
+3     & 17         &  $N,Q \le 1000$ \\ \hline
+4     & 5          &  $K=1$ \\ \hline
+5     & 7          &  $K=2$ \\ \hline
+6     & 11         &  $R_i - L_i + 1 \le K+1$ för alla $1 \le i \le Q$ \\ \hline
 7     & 23         &  $Q=1$, $L_1=1, R_1=N$ \\ \hline
-8     & 17         &  Inga ytterligare begränsningar. \\ \hline
+8     & 17         &  Inga ytterligare begränsningar \\ \hline
 \end{tabular}
 
-\section*{Förklaring av sample}
+\section*{Förklaring av exempelfall 1}
 I tillståndet $[1,5]$ (dvs alla $5$ glassar är kvar) har den andra spelaren en vinnande strategi. 
 Oavsett vad den första spelaren gör har den andra spelaren ett möjligt drag, och efter det finns bara $3$ glassar kvar
 vilket innebär att den första spelaren förlorar.
