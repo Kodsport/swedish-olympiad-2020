@@ -1,0 +1,56 @@
+\problemname{Islegen}
+Frederik og Nils er kommet tidligt til en fest, hvor der serveres is til alle.
+Lige nu er de alene i festlokalet, hvor alle $N$ is står på én lang række på et bord.
+Der er $K$ forskellige slags is, hver slags er repræsenteret af et heltal mellem $0$ og $K-1$.
+
+Nils og Frederik er meget lækkersultne, og de vil derfor spille et spil, som går ud på at spise is.
+De skiftes til at trække, og et træk består af at spise netop én is.
+Festudvalget kan komme ind i lokalet lige hvornår det skal være, og det bør ikke være for åbenlyst, at Nils og Frederik har smugspist af isene.
+Derfor kan de kun spise is enten fra længst til venstre eller længst til højre, så der ikke opstår nogle mellemrum i isrækken.
+Derudover skal der altid være mindst en af hver slags is tilbage, ellers er det jo tydeligt, at nogen har spist is.
+Den spiller, der ikke kan gøre et lovligt træk, har tabt.
+
+Frederik vil absolut ikke tabe mod Nils, derfor har han bedt dig om at skrive et rogram til at afgøre, hvem der har den vindende strategi ved forskellige tilstande i spillet.
+Du vil få $Q$ spørgsmål, hvor hvert spørgsmål er et interval $[L,R]$, og dit program skal afgøre, hvem der har en vindende strategi, når kun isene nummer $L$, $L+1$, $\dots$, $R$ er tilbage (isene er nummererede fra $1$ til $N$ fra venstre til højre).
+
+At en spiller har en vindende strategi betyder, at den spiller altid kan vinde spillet uanset modstanderens træk.
+Man kan vise, at enten Frederik eller Nils altid har en vindende strategi.
+
+\section*{Indlæsning}
+Første linje består af tre heltal $N$, $K$, $Q$ ($1 \le K \le N \le 2 \times 10^5$, $1 \le Q \le 10^5$).
+Anden linje består af $N$ heltal, alle mellem $0$ og $K-1$.
+Disse beskriver rækken af is.
+Hver slags is forekommer mindst én gang.
+De følgende $Q$ linjer består af to heltal $L_i$ og $R_i$ ($1 \le L_i \le R_i \le N$).
+
+\section*{Udskrift}
+Udskriv $Q$ linjer med et heltal for hvert spørgsmål.
+Hvis den spiller, hvis tur det er i tilstanden $[L_i, R_i]$, har en vindende strategi, udskriv~$1$.
+Hvis den anden spiller har en vindende strategi, udskriv~$2$.
+Hvis tilstanden ikke er gyldig, dvs.\ hvis ikke hver slags is forekommer i intervallet, udskriv~$0$.
+
+\section*{Pointgivning}
+Din løsning køres på otte forskellige grupper af test.
+For at få point for en gruppe, skal du klare samtlige test i gruppen.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+Gruppe & Pointi    & Begrænsninger \\ \hline
+$1$     & $9$          &  $N,Q \le 15$ \\ \hline
+$2$     & $11$         &  $N,Q \le 100$  \\ \hline
+$3$     & $17$         &  $N,Q \le 1000$  \\ \hline
+$4$     & $5$          &  $K=1$  \\ \hline
+$5$     & $7$          &  $K=2$  \\ \hline
+$6$     & $11$         &  $R_i - L_i + 1 \le K+1$ for alle $1 \le i \le Q$. \\ \hline
+$7$     & $23$         &  $Q=1$, $L_1=1, R_1=N$ \\ \hline
+$8$     & $17$         &  Ingen yderligere begrænsninger. \\ \hline
+\end{tabular}
+
+\section*{Forklaring af eksemplet}
+I tilstanden $[1,5]$ (dvs.\ alle $5$ is er tilbage) har anden spiller en vindende strategi.
+Uanset hvad første spiller måtte vælge, findes der et muligt træk for anden spiller, hvorefter der bare findes $3$ is tilbage -- dermed har første spiller tabt.
+
+I tilstanden $[1,4]$ har første spiller en vindende strategi, nemlig at fjerne is nummer~1.
+
+Tilstanden $[1,3]$ er ugyldig, idet der ikke findes nogen is af slagsen »$2$« blandt de første tre is.
