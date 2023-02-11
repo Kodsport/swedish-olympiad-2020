@@ -1,10 +1,10 @@
-#!/bin/python2
-n, m = map(int, raw_input().split())
+#!/bin/python3
+n, m = map(int, input().split())
 nPairs = (n + 1) // 2
 
 edges = [[] for i in range(nPairs)]
 for i in range(m):
-	a, b = map(lambda s: int(s) - 1, raw_input().split())
+	a, b = map(lambda s: int(s) - 1, input().split())
 	same = b % 2 == a % 2
 	edges[a // 2].append((b // 2, same))
 	edges[b // 2].append((a // 2, same))

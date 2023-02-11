@@ -1,4 +1,4 @@
-s = raw_input()
+s = input()
 n = len(s)
 ans = 0
 blue = 0

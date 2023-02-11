@@ -1,10 +1,10 @@
-n = int(raw_input())
+n = int(input())
 
 pts1, pts2 = [], []
 for i in range(n):
-	pts1.append(tuple(map(int, raw_input().split())))
+	pts1.append(tuple(map(int, input().split())))
 for i in range(n):
-	pts2.append(tuple(map(int, raw_input().split())))
+	pts2.append(tuple(map(int, input().split())))
 
 minX1, minY1 = pts1[0]
 minX2, minY2 = pts2[0]

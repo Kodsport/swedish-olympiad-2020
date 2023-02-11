@@ -22,12 +22,12 @@ def solve(n,m,g,band):
             heappush(q,(dist+d,u))
     assert(False)
 
-n,m,g = map(int,raw_input().split())
+n,m,g = map(int,input().split())
 
 band = []
 for _ in range(n):
-    a,b,t = map(int,raw_input().split())
+    a,b,t = map(int,input().split())
     band.append([a-1,b-1,t])
 
 
-print solve(n,m,g,band)
+print(solve(n,m,g,band))
