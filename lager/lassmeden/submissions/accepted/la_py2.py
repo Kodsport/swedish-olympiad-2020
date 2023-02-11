@@ -6,8 +6,8 @@ def que(x):
         if good[m][x%m] > 0: 
             suc = True
             break
-    if suc: print 'Ja'
-    else: print 'Nej'
+    if suc: print('Ja')
+    else: print('Nej')
 
 def add(a,b):
     if b <= thres:
@@ -24,11 +24,11 @@ def rem(a,b):
             soll[x] -= 1
 
 thres = 350
-N,Q = map(int,raw_input().split())
+N,Q = map(int,input().split())
 good = [[0]*x for x in range(thres+1)]
 soll = [0]*(N+1)
 for _ in range(Q):
-    s = raw_input()
+    s = input()
     if s[0] == '1':
         _,x = map(int,s.split())
         que(x)

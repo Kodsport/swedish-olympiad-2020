@@ -34,11 +34,11 @@ def dfs(cur):
     for nei in neis[cur]:
         dfs(nei)
 t = input()
-n,m = map(int, raw_input().split())
+n,m = map(int, input().split())
 edgs = []
 neis = [[] for i in range(4*n)]
 for i in range(m):
-    a,b = map(int, raw_input().split())
+    a,b = map(int, input().split())
     a-=1
     b-=1
     edgs.append((a,b))

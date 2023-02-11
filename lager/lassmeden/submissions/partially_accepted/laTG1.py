@@ -2,9 +2,9 @@ from collections import defaultdict
 def que(x):
     for m in range(1,N+1):
         if good[m][x%m] > 0:
-            print 'Ja'
+            print('Ja')
             return
-    print 'Nej'
+    print('Nej')
 
 def add(a,b):
     good[b][a] += 1
@@ -12,10 +12,10 @@ def add(a,b):
 def rem(a,b):
     good[b][a] -= 1
 
-N,Q = map(int,raw_input().split())
+N,Q = map(int,input().split())
 good = [defaultdict(int) for _ in range(N+1)]
 for _ in range(Q):
-    s = raw_input()
+    s = input()
     if s[0] == '1':
         _,x = map(int,s.split())
         que(x)
