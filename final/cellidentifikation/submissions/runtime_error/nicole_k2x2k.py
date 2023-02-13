@@ -2,7 +2,7 @@
 import copy
 import sys
 
-sys.setrecursionlimit(1000000000)
+sys.setrecursionlimit(10000000)
 N,K = map(int, input().split())
 
 graph = [[] for _ in range(2**K)]
