@@ -5,7 +5,7 @@ för att kommunicera med sina agentkollegor. Men han misstänker att någon okä
 övervakar varje knapptryckning han gör. Bland annat känner denna person vid det här laget till de två lösenord
  som August använder till mejladdresserna. 
  
-De två lösenorden $s_1$ och $s_2$ är textsträngar som består av bokstäverna ``a''-``z''. De två lösenorden skrivs 
+De två lösenorden $s_1$ och $s_2$ är textsträngar som består av bokstäverna ``\texttt{a}''-``\texttt{z}''. De två lösenorden skrivs 
 in i två olika textrutor, med maxlängd $l_1$ respektive $l_2$. Maxlängden hos en textruta är ett positivt heltal 
 som avgör hur många bokstäver som kan stå i textrutan. Om man trycker på en bokstav så hamnar den bokstaven längst 
 bak i textrutan, förutom om antalet bokstäver som står i textrutan är lika med maxlängden, för då händer ingenting. 
@@ -13,7 +13,7 @@ bak i textrutan, förutom om antalet bokstäver som står i textrutan är lika m
 För att orsaka förvirring skulle August vilja ha en sekvens av knapptryckningar som åstadkommer att $s_1$ hamnar 
 i den första textrutan och $s_2$ hamnar i den andra. På så sätt kan den okända övervakaren inte veta vilken 
 mejladdress August använder. Din uppgift är att konstruera en sådan sekvens. Det finns $27$ knappar du kan använda, 
-bokstäverna ``a''-``z'' och ``<'' (backspace). Om backspace trycks in så försvinner den sista bokstaven i rutan 
+bokstäverna ``\texttt{a}''-``\texttt{z}'' och ``\texttt{<}'' (backspace). Om backspace trycks in så försvinner den sista bokstaven i rutan 
 (om det finns minst en bokstav i rutan, annars händer ingenting).
 
 För att få full poäng ska du hitta en sekvens som innehåller så få tecken som möjligt. I vissa testgrupper behöver 
@@ -28,12 +28,12 @@ Den första raden innehåller en sträng $s_1$ och ett heltal $l_1$ ($1 \leq |s_
 
 Den andra raden innehåller en sträng $s_2$ och ett heltal $l_2$ ($1 \leq |s_2| \leq l_2 \leq 1000$).
 
-Både $s_1$ och $s_2$ innehåller bara små bokstäver från ``a'' till ``z''.
+Både $s_1$ och $s_2$ innehåller bara små bokstäver från ``\texttt{a}'' till ``\texttt{z}''.
 
 \section*{Utdata}
-Om det inte finns en sekvens av knapptryckningar så som beskrivs i uppgiften, skriv ut ett utropstecken ``!''.
+Om det inte finns en sekvens av knapptryckningar så som beskrivs i uppgiften, skriv ut ett utropstecken ``\texttt{!}''.
 
-Annars, skriv ut en sträng bestående av tecknen ``a''-``z'' och ``<'', den sekvens du hittade. Om det 
+Annars, skriv ut en sträng bestående av tecknen ``\texttt{a}''-``\texttt{z}'' och ``\texttt{<}'', den sekvens du hittade. Om det 
 finns flera lösningar kan du skriva ut vilken som helst. Om $K = 1$ ska sekvensen vara så kort som möjligt, 
 annars räcker det med att den har högst $10^6$ tecken. Det är garanterat att om det finns en lösning, 
 så finns det en med högst $10^6$ tecken.
@@ -46,18 +46,18 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \begin{tabular}{| l | l | l |}
 \hline
 Grupp & Poängvärde & Gränser \\ \hline
-$1$   & $7$       & Lösenorden består enbart av bokstaven ``a'', och $K = 0$. \\ \hline
+$1$   & $7$        & Lösenorden består enbart av bokstaven ``\texttt{a}'', och $K = 0$. \\ \hline
 $2$   & $30$       & $K = 0$. \\ \hline
-$3$   & $11$       & Lösenorden består enbart av bokstäverna ``a'' och ``b'', och $l_1, l_2 \leq 5$.  \\ \hline
+$3$   & $11$       & Lösenorden består enbart av bokstäverna ``\texttt{a}'' och ``\texttt{b}'', och $l_1, l_2 \leq 5$.  \\ \hline
 $4$   & $15$       & $l_1, l_2 \leq 50$. \\ \hline
 $5$   & $17$       & $l_1, l_2 \leq 200$. \\ \hline
 $6$   & $20$       & Inga ytterliggare begränsningar.  \\ \hline
 \end{tabular}
 
 \section*{Förklaring av exempel 1}
-När det första tecknet ``<'' trycks ner så händer ingenting eftersom det inte står något i rutorna. Efter de följande
- fyra knapptryckningarna kommer det stå ``bara'' i den andra rutan precis som vi vill, däremot kommer det stå ``bar'' 
- i den första eftersom den har maxlängd $3$. Därefter raderas de två sista bokstäverna så att det står ``b'' i 
- den första rutan och ``ba'' i den andra. Till slut skrivs ``ra'' in så att det står ``bra'' och ``bara''. Notera 
- att eftersom det första tecknet är helt onödigt så hade det gått att lösa med en kortaste sekvens, men det gör inget 
- eftersom $K = 0$.
+När det första tecknet ``\texttt{<}'' trycks ner så händer ingenting eftersom det inte står något i rutorna. Efter de följande
+fyra knapptryckningarna kommer det stå ``\texttt{bara}'' i den andra rutan precis som vi vill, däremot kommer det stå ``\texttt{bar}'' 
+i den första eftersom den har maxlängd $3$. Därefter raderas de två sista bokstäverna så att det står ``b'' i 
+den första rutan och ``\texttt{ba}'' i den andra. Till slut skrivs ``\texttt{ra}'' in så att det står ``\texttt{bra}'' och ``\texttt{bara}''. Notera 
+att eftersom det första tecknet är helt onödigt så hade det gått att lösa med en kortaste sekvens, men det gör inget 
+eftersom $K = 0$.

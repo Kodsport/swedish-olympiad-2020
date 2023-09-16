@@ -3,10 +3,10 @@ Låssmeden Lårs har blivit ansvarig för att dela ut nycklar till låsen i Matt
 
 Varje gång en person flyttar till landet ger Lårs dem en nyckel som består av två tal $a,b$. Därefter kan personen öppna alla lås med nummer $m$ som uppfyller $m\equiv a \pmod{b}$\footnote{Här betecknar $\equiv$ kongruens. Två tal $x,y$ sägs vara kongruenta modulo $n$, betecknas $x\equiv y \pmod{n}$, om $n|(x-y)$, alltså att $x-y$ är jämnt delbart med $n$. Detta är samma sak som att $x$ och $y$ har samma rest när de delas med $n$. I de flesta programmeringsspråk kan det skrivas som att $x\%n==y\%n$}. När en person flyttar från landet tar Lårs tillbaka deras nyckel. 
 
-Det finns tre typer av händelser som Lårs, i egenskap av låsansvarig, behöver hantera -- svara på frågan om någon invånare kan öppna ett specifikt lås, någon som flyttar till landet och någon som flyttar från landet. Lårs ska på varje fråga om det finns någon invånare som kan öppna ett specifikt lås svara ``ja'' eller ``nej''. Från början bor ingen i landet.
+Det finns tre typer av händelser som Lårs, i egenskap av låsansvarig, behöver hantera: svara på frågan om någon invånare kan öppna ett specifikt lås, någon som flyttar till landet och någon som flyttar från landet. Lårs ska på varje fråga om det finns någon invånare som kan öppna ett specifikt lås svara ``ja'' eller ``nej''. Från början bor ingen i landet.
 
 \section*{Indata}
-Den första raden innehåller två heltal $N,Q$, antalet lås och antalet händelser ($1\leq N,Q \leq 2\cdot 10^5$).
+Den första raden innehåller två heltal $N,Q$ ($1\leq N,Q \leq 2\cdot 10^5$), antalet lås och antalet händelser.
 
 Därefter kommer $Q$ rader som är på någon av följande former:
 \begin{itemize}
@@ -16,7 +16,7 @@ Därefter kommer $Q$ rader som är på någon av följande former:
 \end{itemize}
 
 \section*{Utdata}
-För varje fråga om någon kan låsa upp ett specifikt lås (första siffran är 1) ska du skriva ut ``ja'' om låset kan öppnas av någon invånare som just nu bor i landet, eller ``nej'' om låset inte kan öppnas.
+För varje fråga om någon kan låsa upp ett specifikt lås (första siffran är $1$) ska du skriva ut ``\texttt{ja}'' om låset kan öppnas av någon invånare som just nu bor i landet, eller ``\texttt{nej}'' om låset inte kan öppnas.
 
 \section*{Poängsättning}
 Din lösning kommer att testas på en mängd testfallsgrupper.
@@ -26,9 +26,9 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \begin{tabular}{| l | l | l |}
 \hline
 Grupp & Poängvärde & Gränser \\ \hline
-$1$    & $25$         & Antalet händelser där någon försöker öppna ett lås är $\leq 20$ \\ \hline
-$2$    & $30$         & Ingen flyttar från landet, och alla väljer olika $b$ \\ \hline
-$3$    & $45$         & Inga ytterligare begränsningar \\ \hline
+$1$    & $25$         & Antalet händelser där någon försöker öppna ett lås är $\leq 20$. \\ \hline
+$2$    & $30$         & Ingen flyttar från landet, och alla väljer olika $b$. \\ \hline
+$3$    & $45$         & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
 
 \section*{Förklaring av exempelfall}

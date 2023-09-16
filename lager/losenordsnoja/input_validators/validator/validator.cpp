@@ -11,7 +11,7 @@ void run() {
     string s2 = "";
     int L1,L2;
 
-    int k = Int(0, 10);
+    int k = Int(0, 1);
     assert(k <= kMax);
     Endl();
 
