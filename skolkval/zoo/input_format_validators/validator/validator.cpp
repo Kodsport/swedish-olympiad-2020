@@ -24,11 +24,11 @@ ll rec(int at, int prev) {
 }
 
 void run() {
-	N = Int(2, Arg("n"));
+	N = Int(2, Arg("maxn", 15));
 	Space();
-	K = Int(2, Arg("k"));
+	K = Int(2, Arg("maxk", 10));
 	Space();
-	M = Int(Arg("mlo"), Arg("mhi"));
+	M = Int(0, Arg("maxm", 5));
 	Endl();
 
 	bad.assign(K + 1, vi(K + 1));
