@@ -5,30 +5,31 @@ börjat gå i ide vid helt olika tidpunkter under året.
 Björne har öppnat ett magasin och är orolig för tjuvar under den del av året då han själv sover.
 Han ska därför anställa andra björnar så att det alltid är någon av de anställda som är vaken och kan vakta magasinet.
 
-Totalt är det $N$ björnar som kandiderar. Varje björn sover $d$ dagar per år,
-inklusive dagen då den går i ide och dagen då den vaknar. Alla björnar sover lika länge.
-Man kan varken jobba dagen då man går och lägger sig eller dagen då man vaknar.
-Hur många behöver Björne som minst anställa, givet att Björne kommer vakta sitt magasin själv när han är vaken?
+Totalt är det $N$ björnar som sökt jobbet.
+Varje björn går i ide någon viss dag på året för att sova exakt $d$ dagar i sträck, och kan inte jobba under någon av dessa dagar.
+Hur många björnar behöver Björne som minst anställa, givet att Björne kommer vakta sitt magasin själv när han är vaken?
 
-Räkna med att varje år har $365$ dagar (björnar som bor vid ekvatorn bryr sig inte om skottår), och att \\
-januari har 31 dagar, \\
-februari har 28 dagar, \\
-mars har 31 dagar, \\
-april har 30 dagar, \\
-maj har 31 dagar, \\ 
-juni har 30 dagar, \\
-juli har 31 dagar, \\
-augusti har 31 dagar, \\
-september har 30 dagar, \\
-oktober har 31 dagar, \\
-november har 30 dagar och \\
-december har 31 dagar.
+Räkna med att varje år har $365$ dagar (björnar som bor vid ekvatorn bryr sig inte om skottår), och att:
+\begin{enumerate}
+  \item januari har 31 dagar, 
+  \item februari har 28 dagar, 
+  \item mars har 31 dagar, 
+  \item april har 30 dagar, 
+  \item maj har 31 dagar,  
+  \item juni har 30 dagar, 
+  \item juli har 31 dagar, 
+  \item augusti har 31 dagar, 
+  \item september har 30 dagar, 
+  \item oktober har 31 dagar, 
+  \item november har 30 dagar och 
+  \item december har 31 dagar.
+\end{enumerate}
 
 \section*{Indata}
 Första raden innehåller två heltal $N$ och $d$ ($2 \leq N \leq 10^5, 1 \leq d \leq 364$), antalet björnar (inklusive Björne),
 samt antalet dagar varje björn sover.
 
-De följande $N$ raderna innehåller dagarna då respektive björn går i ide. De anges på formen dd/mm.
+De följande $N$ raderna innehåller dagarna då respektive björn går i ide. De anges på formen \texttt{dd/mm}.
 
 Första björnen som anges är Björne själv.
 
