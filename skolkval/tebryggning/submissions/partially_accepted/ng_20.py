@@ -1,1 +1,2 @@
-print((int(raw_input().split()[1])+9)/10)
+#!/usr/bin/env python3
+print((int(input().split()[1])+9)//10)
