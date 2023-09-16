@@ -4,9 +4,9 @@
 #define sz(v) int(v.size())
 
 void run() {
-	int n = Int(1, Arg("n"));
+	int n = Int(1, Arg("n", 7));
 	Space();
-	int m = Int(1, Arg("m"));
+	int m = Int(1, Arg("m", 7));
 	Endl();
 
 	map<char, int> count;
@@ -23,7 +23,7 @@ void run() {
 
 	int neighLim = Arg("lim", 8);
 	for (int i = 0; i < n; i++)
-	for (int j = 0; j < n; j++) {
+	for (int j = 0; j < m; j++) {
 		int same = 0;
 		for (int di = -1; di <= 1; di++)
 		for (int dj = -1; dj <= 1; dj++)

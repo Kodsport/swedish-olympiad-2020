@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#pragma comment(linker, "/stack:200000000")
 #pragma GCC optimize("Ofast")
 
 using namespace std;
