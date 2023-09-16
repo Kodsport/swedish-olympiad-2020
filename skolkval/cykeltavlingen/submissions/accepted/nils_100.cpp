@@ -20,7 +20,7 @@ double test(double t){
     rep(c1,0,n){
         if(L <= t*S[c1])continue;
         if(S[c1] >= C[c1])res += L+1;
-        res += (C[c1] * L - S[c1] * C[c1] * t) / double(C[c1] - S[c1]);
+        else res += (C[c1] * L - S[c1] * C[c1] * t) / double(C[c1] - S[c1]);
     }
     return res;
 }
