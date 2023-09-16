@@ -13,10 +13,14 @@ Det finns totalt $K$ möjliga beståndsdelar, och inga två celltyper består av
 Som hjälp ska du göra ett program som givet $Q$ stycken frågor, vilka var och en ger beståndsdelarna du ser hos en cell, försöker avgöra vilken celltyp det är du tittar på.
 
 \section*{Indata}
-Den första raden innehåller heltalen $N$ och $K$ ($1 \leq N \leq 2 \cdot 10^5$, $1 \leq K \leq 21$), antal celltyper i din bok och antalet möjliga beståndsdelar.
+Den första raden innehåller heltalen $N$ och $K$ ($1 \leq N \leq 2 \cdot 10^5$, $1 \leq K \leq 21$), antal celltyper i din bok och antalet möjliga beståndsdelar. 
+
 Därefter följer $N$ rader, där den första raden beskriver celltyp $1$, den andra raden celltyp $2$ o.s.v.
-Varje rad innehåller en sträng med $K$ ettor eller nollor, där tecken $i$ är en etta om celltypen innehåller beståndsdel $i$.
-Därefter en rad med heltalet $Q$ ($1 \leq Q \leq 2\cdot 10^5$), följt av $Q$ rader som på samma format som celltyperna beskriver vilka beståndsdelar du \textit{ser} i varje cell.
+Varje rad innehåller en sträng med $K$ ettor eller nollor, där tecken $i$ är en etta om celltypen innehåller beståndsdel $i$. 
+
+Därefter följer en rad med heltalet $Q$ ($1 \leq Q \leq 2\cdot 10^5$), antalet frågor. 
+
+Efter detta följer $Q$ rader som beskriver vilka beståndsdelar du \textit{ser} i varje cell på samma format som celltyperna.
 En etta på position $i$ här betyder alltså att du ser att den cell som du tittar på i mikroskopet har beståndsdel $i$.
 Det kan dock vara så att cellen faktiskt innehåller fler beståndsdelar, men att du inte kan se dem med ditt mikroskop.
 Notera också att det är möjligt att två celler A och B båda innehåller en viss beståndsdel, men att du
