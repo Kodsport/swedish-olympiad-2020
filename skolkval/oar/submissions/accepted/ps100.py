@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 N=int(sys.stdin.readline())
 i=0
@@ -9,5 +10,4 @@ while N>0:
 	i+=j
 	j=k
 	N-=i
-print n
-
+print(n)

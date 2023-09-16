@@ -1,7 +1,10 @@
 \problemname{Öar}
-2020 års International Olympiad in Informatics (IOI) kommer att avgöras i Singapore, ett till ytan litet land som består av massor av öar. På en av utflykterna på IOI ska de $N$ deltagarna besöka dessa öar. Men deltagarna går och tänker på hur de ska implementera Fibonacci-heapar, så en efter en går vilse och hittar inte tillbaka.
+2020 års International Olympiad in Informatics (IOI) kommer att avgöras i Singapore, ett till ytan litet land som består av massor av öar.
+På en av utflykterna på IOI ska de $N$ deltagarna besöka dessa öar.
+Men deltagarna går och tänker på hur de ska implementera Fibonacci-heapar, så en efter en går vilse och hittar inte tillbaka.
 
-På första ön försvinner en deltagare, på andra ön försvinner ytterligare en deltagare. På var och en av de följande öarna försvinner lika många deltagare som sammanlagt försvann på de två senaste öarna (om inte deltagarna är slut innan dess).
+På första ön försvinner en deltagare, på andra ön försvinner ytterligare en deltagare.
+Om $a_i$ är antalet deltagare som försvinner på ö $i$, så försvinner $a_{k-2} + a_{k-1}$ från ö $k$ (eller antalet kvarvarande deltagare, om det är värre kvar).
 
 \begin{figure}[h]
   \centering
@@ -21,13 +24,9 @@ Ett heltal $A$, numret på ön där den $N$:te deltagaren försvinner.
 Din lösning kommer att testas på fem olika testfall.
 
 \noindent
-\begin{tabular}{| l | l |}
+\begin{tabular}{| l | l | l |}
   \hline
-  Fall & Poängvärde \\ \hline
-  $1$    & $20$     \\ \hline 
-  $2$    & $20$     \\ \hline 
-  $3$ & $20$        \\ \hline
-  $4$    & $20$     \\ \hline
-  $5$    & $20$     \\ \hline
+  Fall & Poängvärde & Gränser \\ \hline
+  $1$    & $40$        &  Exakt $a_k$ deltagare försvinner från den sista ön. \\ \hline 
+  $2$    & $60$        &  Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
-
