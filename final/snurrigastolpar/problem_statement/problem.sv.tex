@@ -15,9 +15,8 @@ Rafaj har nämligen spridit ut alla sultanens magiska oljelampor på stans snurr
 Du måste nu samla in så många oljelampor som möjligt innan någon råkar släppa ut andarna och
 katastrofen blir ett faktum.
 
-I planet finns $n \leq 1000$ snurriga stolpar med heltalskoordinater mellan $1$ och $m \leq 10^9$,
-och på varje stolpe finns nu en magisk oljelampa. Du vill besöka så många stolpar som möjligt med den
-flygande mattan, genom att vandra på följande sätt:
+I planet finns $n$ snurriga stolpar med heltalskoordinater och på varje stolpe finns nu en magisk oljelampa.
+Du vill besöka så många stolpar som möjligt med den flygande mattan, genom att vandra på följande sätt:
 \begin{itemize}
   \item Du får börja vid godtycklig stolpe, eftersom mattan kan flyga obehindrat då den är tom
   \item Du får bara röra dig upp/ner/vänster/höger
@@ -27,8 +26,9 @@ flygande mattan, genom att vandra på följande sätt:
 Hur många stolpar kan du besöka?
 
 \section*{Indata}
-Den första raden innehåller ett heltal $n \ge 1$.
-Därefter följer $n$ rader. Varje rad innehåller två positiva heltal $x,y \leq m$, stolparnas koordinater.
+Den första raden innehåller ett heltal $n$ ($1 \leq n \leq 1000$).
+Därefter följer $n$ rader. Den $i$:te raden innehåller två positiva heltal
+$x_{i}, y_{i}$ ($1 \leq x_{i}, y_{i} \leq 10^9$), den $i$:te stolpens koordinater.
 Det kommer aldrig att stå två stolpar på samma position.
 
 \section*{Utdata}
@@ -42,8 +42,8 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 \begin{tabular}{| l | l | l |}
 \hline
 Grupp & Poängvärde & Gränser \\ \hline
-$1$   & $19$       & $n \leq 25, m \leq 5$ \\ \hline
-$2$   & $16$      & $n \leq 80, m \leq 80$ \\ \hline
-$3$   & $20$      & $n \leq 80, m \leq 10^9$ \\ \hline
-$4$   & $45$      & $n \le 1000, m \leq 10^9$ \\ \hline
+$1$   & $19$       & $n \leq 25, x_{i}, y_{i} \leq 5$ \\ \hline
+$2$   & $16$       & $n \leq 80, x_{i}, y_{i} \leq 80$ \\ \hline
+$3$   & $20$       & $n \leq 80$ \\ \hline
+$4$   & $45$       & Inga ytterligare begränsningar \\ \hline
 \end{tabular}

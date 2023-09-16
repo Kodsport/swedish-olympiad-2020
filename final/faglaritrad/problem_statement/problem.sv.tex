@@ -1,17 +1,17 @@
 \problemname{Fåglar i träd}
 Vintern har kommit och sidensvansarna har börjat flyga söderut i jakt på mat. Sidensvansen Siri är ledare för en 
 flock bestående av $M$ fåglar. Flocken är på väg mot ett rönnbärsträd som de besöker varje år. Trädet är en graf som består av $N$ noder
- och $N-1$ kanter som binder samman vissa par av noder. Genom åren har Siri upptäckt att noden med index $K$ har extra 
- mycket rönnbär, och hon vill därför se till att flocken landar på ett sätt som gör att hon hamnar på noden $K$. 
- Men precis som när människor sätter sig vid ett bord, så har sidensvansar vissa sociala regler de måste följa när 
- de landar i ett rönnbärsträd:
- 
- \begin{enumerate}
- \item Fåglarna landar en efter en i trädet på varsin nod. Ordningen de landar i är förutbestämd, och Siri landar 
- alltid sist eftersom hon är ledaren.
- \item Den första fågeln kan landa på vilken nod som helst, men varje efterföljande fågel måste landa på en nod som 
- är närliggande till den fågel som landade senast, av de som det är möjligt att landa brevid.
- \end{enumerate}
+och $N-1$ kanter som binder samman vissa par av noder. Genom åren har Siri upptäckt att noden med index $K$ har extra 
+mycket rönnbär, och hon vill därför se till att flocken landar på ett sätt som gör att hon hamnar på noden $K$. 
+Men precis som när människor sätter sig vid ett bord, så har sidensvansar vissa sociala regler de måste följa när 
+de landar i ett rönnbärsträd:
+
+\begin{enumerate}
+\item Fåglarna landar en efter en i trädet på varsin nod. Ordningen de landar i är förutbestämd, och Siri landar 
+alltid sist eftersom hon är ledaren.
+\item Den första fågeln kan landa på vilken nod som helst, men varje efterföljande fågel måste landa på en nod som 
+är närliggande till den fågel som landade senast, av de som det är möjligt att landa brevid.
+\end{enumerate}
 
 Om exempelvis de tre första fåglarna har landat, så måste den fjärde fågeln landa bredvid den tredje om det går. Om det 
 inte går så måste den landa bredvid den andra fåglen om det går, o.s.v.

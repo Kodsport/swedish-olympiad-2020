@@ -23,8 +23,8 @@ Med alfabetisk ordning menas att man jämför två sekvenser genom att primärt 
 T.ex. kommer sekvensen \texttt{1122} före \texttt{1211}, men efter \texttt{1112}.
 
 \section*{Indata}
-Den första raden innehåller två heltal $1\leq n \leq 10^5$, antalet stolar i klassrummet och $0\leq m \leq n/2$, antalet stolpar med samma färg.
-Därefter följer $m$ rader som vardera består av två heltal, de par av stolar som har samma färg (1-indexerat).
+Den första raden innehåller två heltal $n$ och $m$ ($1\leq n \leq 10^5$, $0 \leq m \leq \frac{n}{2}$), antalet stolar i klassrummet och antalet stolpar med samma färg.
+Därefter följer $m$ rader som vardera innehåller två heltal $s_{1}, s_{2}$ ($1 \leq s_{1}, s_{2} \leq N$, $s_{1} \neq s_{2}$), vilket betyder att stol $s_{1}$ och $s_{2}$ har samma färg.
 Varje stol har samma färg som högst en annan.
 
 \section*{Utdata}
@@ -36,12 +36,12 @@ För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
 \noindent
 \begin{tabular}{| l | l | l |}
-\hline
-Grupp & Poängvärde & Gränser \\ \hline
-1     & 12         & $n \leq 15$\\ \hline
-2     & 23         & $n \leq 40$ \\ \hline
-3     & 25         & Stol $i$ kan bara ha samma färg som stol $i\pm 1$ \\ \hline
-4     & 40         & Inga ytterligare begränsningar \\ \hline
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$     & $12$         & $n \leq 15$\\ \hline
+  $2$     & $23$         & $n \leq 40$ \\ \hline
+  $3$     & $25$         & Stol $i$ kan bara ha samma färg som stol $i\pm 1$. \\ \hline
+  $4$     & $40$         & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
 
 \section*{Förklaring av exempelfall 1}
