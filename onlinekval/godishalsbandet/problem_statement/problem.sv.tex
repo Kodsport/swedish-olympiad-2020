@@ -15,7 +15,7 @@ Strängen består endast av bokstäverna \texttt{B} och \texttt{V},
 och har totalt ett jämnt antal bokstäver.
 
 \section*{Utdata}
-Skriv ut en rad med ett heltal, det maximala antalet blåa godisar Alice
+Skriv ut en rad med ett heltal: det maximala antalet blåa godisar Alice
 kan få i sin del av halsbandet.
 
 \section*{Poängsättning}
@@ -23,18 +23,30 @@ Din lösning kommer att testas på en mängd testfallsgrupper.
 För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
 \noindent
-\begin{tabular}{| l | l | l |}
-\hline
-Grupp & Poängvärde & Gränser \\ \hline
-$1$   & $20$       & Halsbandet ser ut som på \href{https://www.progolymp.se/2020/affisch.pdf}{affischen} \\ \hline
-$2$   & $40$       & Halsbandet består av högst $1\,000$ godisar\\ \hline
-$3$   & $40$       & Halsbandet består av högst $1\,000\,000$ godisar \\ \hline
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+  $1$   & $20$       & Halsbandet ser ut så som i figur \ref{fig:group-1}. \\ \hline
+  $2$   & $40$       & Halsbandet består av högst $1\,000$ godisar. \\ \hline
+  $3$   & $40$       & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
 
+
+\begin{figure}[h]
+	\centering
+\includegraphics[width=0.5\textwidth]{group1}
+\caption{Halsbandet i första testfallsgruppen}
+\label{fig:group-1}
+\end{figure}
+
+
 \section*{Förklaring av exempelfall 1}
-BBVVBVVVBB har längd 10 så Alice måste dela halsbandet i två delar med 5 godisar i varje.
-De möjliga delarna hon kan få är BBVVB, BVVBV, VVBVV, VBVVV, BVVVB, VVVBB, VVBBB, VBBBB, BBBBV, BBBVV.
-Hon får mest blåa godisar genom att välja VBBBB eller BBBBV som har $4$ blåa godisar.
+\texttt{BBVVBVVVBB} har längd 10 så Alice måste dela halsbandet i två delar med $5$ godisar i varje.
+De möjliga delarna hon kan få är \texttt{BBVVB}, \texttt{BVVBV}, \texttt{VVBVV}, \texttt{VBVVV},
+\texttt{BVVVB}, \texttt{VVVBB}, \texttt{VVBBB}, \texttt{VBBBB}, \texttt{BBBBV}, \texttt{BBBVV}.
+Hon får mest blåa godisar genom att välja \texttt{VBBBB} eller \texttt{BBBBV} som har $4$ blåa godisar.
+
+
 
 \begin{figure}[h]
 	\centering

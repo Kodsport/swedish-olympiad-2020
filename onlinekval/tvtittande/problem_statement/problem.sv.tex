@@ -12,7 +12,7 @@ På nästa rad finns $k$ heltal, där det $i$:te talet är längden av TV-serie 
 
 De följande $n$ raderna beskriver kalasen i ordning. Rad $i$ börjar med två heltal $1 \leq d_i \leq 2 \times 10^5$ och $c_i \ge 1$, vilken dag kalaset är och antalet TV-serier som kommer att diskuteras. Sedan följer $c_i$ olika heltal på samma rad, de TV-serier som kommer diskuteras på kalaset. Summan av alla $c_i$ är inte större än $2 \times 10^5$.
 
-Bob är inte bjuden till mer ett kalas någon dag. Det är nu morgon dag $0$ och Bob ska alltså inte på kalas idag.
+Bob är inte bjuden till mer än ett kalas någon dag. Det är nu morgon dag $0$ och Bob ska alltså inte på kalas idag.
 
 \section*{Utdata}
 Skriv ut \texttt{Ja} om det är möjligt att se klart TV-serierna i tid till evenemangen där de diskuteras. Skriv ut \texttt{Nej} om det inte är möjligt.
@@ -22,13 +22,14 @@ Din lösning kommer att testas på en mängd testfallsgrupper.
 För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
 \noindent
-\begin{tabular}{| l | l | l |}
-\hline
-Grupp & Poängvärde & Gränser \\ \hline
-$1$   & $40$       & $n \leq 50$, $k \leq 50$ \\ \hline
-$2$   & $20$       & $n \leq 3000$, $k \leq 3000$ \\ \hline
-$3$   & $40$       & Inga ytterligare begränsningar. \\ \hline
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+    $1$   & $40$     & $n \leq 50$, $k \leq 50$ \\ \hline
+    $2$   & $20$     & $n \leq 3000$, $k \leq 3000$ \\ \hline
+    $3$   & $40$     & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
+
 
 \section*{Förklaring av exempelfall 1}
 Första kalaset är om två dagar, och där ska den 20 timmar långa TV-serien diskuteras. Eftersom Bob tänker titta på TV i tio timmar per dag hinner han som tur är precis se den i tid. Sedan får han en ledig dag till nästa kalas så att han precis hinner se serie 3 och 4 på fem timmar var. På den femte dagen räcker det att Bob tittar på serie 1 eftersom han redan har sett serie 2.

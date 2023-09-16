@@ -17,30 +17,28 @@ Lagen är väldigt effektiva på att gå in och ut ur vagnarna, så det tar inge
 Alla lag står just nu i kö framför pariserhjulet, och det svenska laget undrar hur lång tid det kommer ta innan alla har åkt.
 
 \section*{Indata}
-Den första raden innehåller heltalen $N$ och $M$ separerade med blanksteg,
+Den första raden innehåller heltalen $N$ och $M$ ($N,M \leq 2 \times 10^5$),
 antalet lag och antalet vagnar i pariserhjulet.
-Den andra raden innehåller $N$ heltal $T_1 ... T_N$ separerade med blanksteg,
-där $T_i$ är antalet varv lag nummer $i$ vill åka. Lagen är ordnade efter
-köplats, där $T_1$ är det första laget i kön.
+Den andra raden innehåller $N$ heltal $T_1, \dots , T_N$ ($1 \leq T_i \leq 10^9$), där $T_i$ är antalet som varv lag
+nummer $i$ vill åka. Lagen är ordnade efter köplats, där $T_1$ är det första laget i kön.
 
 \section*{Utdata}
 Skriv ut en rad med ett heltal, antalet minuter det kommer ta för alla lag att åka.
 
-\section*{Begränsningar}
-Din lösning kommer att testas på en uppsättning testgrupper, var och en värd en viss poäng.
-Varje testgrupp innehåller flera testfall.
-För att få poäng för en testgrupp måste du klara alla testfallen i gruppen.
-Din slutgiltiga poäng på problemet kommer att vara den maximala poängen av en enda inskickning.
+\section*{Poängsättning}
+Din lösning kommer att testas på en mängd testfallsgrupper.
+För att få poäng för en grupp så måste du klara alla testfall i gruppen.
 
 \noindent
-\begin{tabular}{| l | l | l |}
-\hline
-Grupp & Poäng & Gränser \\ \hline
-1     & 20    & $1 \le N, M, T_i \le 100$ \\ \hline
-2     & 30    & $1 \le N, M, T_i \le 1000$ \\ \hline
-3     & 25    & $1 \le N, M \le 1000, 1 \le T_i \le 10^9$ \\ \hline
-4     & 25    & $1 \le N, M \le 200\,000, 1 \le T_i \le 10^9$ \\ \hline
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Grupp & Poängvärde & Gränser \\ \hline
+    $1$   & $20$     & $1 \leq N, M, T_i \leq 100$ \\ \hline
+    $2$   & $30$     & $1 \leq N, M, T_i \leq 1000$ \\ \hline
+    $3$   & $25$     & $1 \leq N, M \leq 1000$ \\ \hline
+    $4$   & $25$     & Inga ytterligare begränsningar. \\ \hline
 \end{tabular}
+
 
 \section*{Förklaring av exempelfall}
 
@@ -49,7 +47,7 @@ Grupp & Poäng & Gränser \\ \hline
 \caption{Exempelfall 1}
 \end{figure}
 
-I exempelfall 1 finns det 4 lag och 3 vagnar.
-Lagen, som i bilden är Sverige, Norge, Finland och Danmark, vill åka 2, 2, 1 och 1 varv respektive.
+I exempelfall $1$ finns det $4$ lag och $3$ vagnar.
+Lagen, som i bilden är Sverige, Norge, Finland och Danmark, vill åka $2$, $2$, $1$ och $1$ varv respektive.
 Notera att det danska laget inte kan gå in i pariserhjulet vid $t=3$ eller $t=4$
 eftersom det svenska / norska laget redan sitter i den nedersta vagnen och vill i båda fallen åka ett varv till.
