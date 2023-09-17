@@ -9,6 +9,9 @@ void run() {
 	int m = Int(1, Arg("m", 10));
 	Endl();
 
+	int nm = Arg("nm", n*m);
+  assert(n*m <= nm);
+
   bool has = false;
 	for(int i = 0; i<n;i++){
 		string str = Line();

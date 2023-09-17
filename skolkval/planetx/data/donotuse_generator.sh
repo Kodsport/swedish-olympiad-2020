@@ -33,26 +33,26 @@ tc randr-10 gen_random maxn=1 dens=50
 
 
 group g2 20
-limits n=3 m=3
+limits nm=8
 tc 1
-tc_manual g2
 
-tc empty-small gen_empty n=3 m=3
-tc rands-01 gen_random maxn=3 maxm=3 dens=20
-tc rands-02 gen_random maxn=3 maxm=3 dens=20
-tc rands-03 gen_random maxn=3 maxm=3 dens=20
-tc rands-04 gen_random maxn=3 maxm=3 dens=20
-tc rands-05 gen_random maxn=3 maxm=3 dens=20
-tc rands-06 gen_random maxn=3 maxm=3 dens=30
-tc rands-07 gen_random maxn=3 maxm=3 dens=30
-tc rands-08 gen_random maxn=3 maxm=3 dens=30
-tc rands-09 gen_random maxn=3 maxm=3 dens=50
-tc rands-10 gen_random maxn=3 maxm=3 dens=50
+tc empty-small gen_empty n=2 m=4
+tc rands-01 gen_random maxn=4 maxm=2 dens=20
+tc rands-02 gen_random maxn=4 maxm=2 dens=20
+tc rands-03 gen_random maxn=2 maxm=4 dens=20
+tc rands-04 gen_random maxn=1 maxm=8 dens=20
+tc rands-05 gen_random maxn=8 maxm=1 dens=20
+tc rands-06 gen_random maxn=2 maxm=4 dens=30
+tc rands-07 gen_random maxn=2 maxm=4 dens=30
+tc rands-08 gen_random maxn=1 maxm=8 dens=30
+tc rands-09 gen_random maxn=2 maxm=4 dens=50
+tc rands-10 gen_random maxn=4 maxm=2 dens=50
 
 group g3 60
 include_group g1
 include_group g2
 tc 3
+tc_manual g2
 tc_manual g3
 tc_manual g4
 tc_manual g5
