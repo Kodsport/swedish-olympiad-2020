@@ -5,7 +5,7 @@ this time, you have decided to take a break from competitive programming. You ar
 specifically, you are interested in the cells of your favorite cactus (their green color reminds you of Accepted verdicts).
 
 In the sample you are looking at, unfortunately, there are all sorts of cells, and it's not entirely easy to
-know if you are really looking at your favorites. Different types of cells have different components they
+know if you are really looking at your favorites. Different types of cells have different components that they
 can be identified with. For example, most cells have Golgi apparatuses, but only plant cells have vacuoles.
 Identification is complicated by the fact that your cheap microscope doesn't always manage to see all the components in a cell.
 
@@ -19,7 +19,7 @@ a cell, attempts to determine which type of cell you are looking at.
 The first line of the input contains the integers $N$ and $K$ ($1 \leq N \leq 2 \cdot 10^5$, $1 \leq K \leq 21$),
 the number of cell types in your book and the number of possible components.
 
-The following $N$ lines each describe a cell type from your book, the first line being the first one, 
+The following $N$ lines each describe a cell type from your book, the first line describing the first one, 
 the second line describes the second one and so on. Each line contains a string containing $K$ ones or zeros,
 where the $i$:th character is a one if the cell type contains component $i$.
 
@@ -28,15 +28,15 @@ The next line contains a single integer $Q$ ($1 \leq Q \leq 2\cdot 10^5$), the n
 The following $Q$ lines each describe a query. Each line contains a description of the components you can \textit{see}
 in the microscope, in the same format as the cells in your book. A one in position $i$ means that you know that the cell
 you are looking at has component $i$. However, it may be the case that the cell contains more components that you can't
-see with your microscope. Also note that it is possible that två different cells both have a certain component, but
+see with your microscope. Also note that it is possible that two different cells both have a certain component, but
 you are only able to see it in one of them.
 
 \section*{Output}
 For each query, you should print a line containing the answer.
 
 \begin{itemize}
-  \item If the cell type can be decided unambiguously, print the \textit{index} $1 \leq i \leq N$ of the type the cell
-  \item If there, are multiple possibilites, you should print ``\texttt{vet ej}'' (don't know).
+  \item If the cell type can be decided unambiguously, print the \textit{index} $1 \leq i \leq N$ of the type of the cell.
+  \item If there are multiple possibilites, you should print ``\texttt{vet ej}'' (don't know).
   \item If there are no matching cell types, you should print ``\texttt{finns ej}'' (doesn't exist).
 \end{itemize}
 
