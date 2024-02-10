@@ -10,9 +10,9 @@ only step onto a walkway at the beginning of it and step off at the end of it. W
 it takes $g$ seconds to walk one meter. The corridor and walkways are narrow enough that only the time it takes to
 travel parallel to the corridor matters. Therefore, if one walkway ends at the same distance from the beginning as
 another walkway starts, it takes no time to move between the walkways. If the team plan their route optimally, how
-fast can they the entire corridor?
+fast can they reach the end of the corridor?
 
-Note that it may be advantageous to sometimes walk a bit backward through the
+Note that it may be advantageous to sometimes walk backward through the
 corridor to reach a walkway that takes one further ahead. However, there are no walkways going backward through the corridor.
 
 \section*{Input}
@@ -41,7 +41,6 @@ To get the points for a group, it must pass all the test cases in the group.
   $5$   & $24$     & No further constraints. \\ \hline
 \end{tabular}
 
-%\section*{Samples}
 
 \section*{Explanation of Samples}
 
@@ -50,7 +49,7 @@ To get the points for a group, it must pass all the test cases in the group.
 \includegraphics[width=0.7\textwidth]{sample1}
 \caption{Sample 1}
 \end{figure}
-In example 1, it takes 2 seconds to walk one meter when the team is not a walkway.
+In sample 1, it takes 2 seconds to walk one meter when the team is not on a walkway.
 The fastest way to reach the end is to walk to the walkway that takes 5 seconds, use it,
 then walk to the walkway that takes 2 seconds and use it.
 In total, this takes $4+5+2+2=13$ seconds.
@@ -64,7 +63,7 @@ In total, this takes $4+5+2+2=13$ seconds.
 \caption{Sample 2}
 \end{figure}
 In sample 2, it instead takes 5 seconds to walk one meter when the team is not on a walkway.
-The fastest way to reach the end is to walk to the walkway that takes 8 seconds, use it, go back
-one meter and then use walkway that takes 2 seconds, and then walk the final meter.
+The fastest way to reach the end is to walk to the walkway that takes 8 seconds, use it, and then go back
+one meter to use the walkway that takes 2 seconds, and then walk the final meter.
 In total, this takes $5+8+5+2+5=25$ seconds.
 
