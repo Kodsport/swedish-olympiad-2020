@@ -1,0 +1,55 @@
+\problemname{Identifying Cells}
+\noindent
+After receiving yet another Wrong Answer verdict, even though your program was guaranteed to be completely correct
+this time, you have decided to take a break from competitive programming. You are now studying biology instead, more
+specifically, you are interested in the cells of your favorite cactus (their green color reminds you of Accepted verdicts).
+
+In the sample you are looking at, unfortunately, there are all sorts of cells, and it's not entirely easy to
+know if you are really looking at your favorites. Different types of cells have different components they
+can be identified with. For example, most cells have Golgi apparatuses, but only plant cells have vacuoles.
+Identification is complicated by the fact that your cheap microscope doesn't always manage to see all the components in a cell.
+
+Your biology book describes the components of $N$ different cell types. There are a total of $K$ possible
+components, and no two cell types consist of exactly the same parts.
+
+In order to aid your research, you will create a program that, given $Q$ queries, each providing the components you see in
+a cell, attempts to determine which type of cell you are looking at.
+
+\section*{Input}
+The first line of the input contains the integers $N$ and $K$ ($1 \leq N \leq 2 \cdot 10^5$, $1 \leq K \leq 21$),
+the number of cell types in your book and the number of possible components.
+
+The following $N$ lines each describe a cell type from your book, the first line being the first one, 
+the second line describes the second one and so on. Each line contains a string containing $K$ ones or zeros,
+where the $i$:th character is a one if the cell type contains component $i$.
+
+The next line contains a single integer $Q$ ($1 \leq Q \leq 2\cdot 10^5$), the number of queries.
+
+The following $Q$ lines each describe a query. Each line contains a description of the components you can \textit{see}
+in the microscope, in the same format as the cells in your book. A one in position $i$ means that you know that the cell
+you are looking at has component $i$. However, it may be the case that the cell contains more components that you can't
+see with your microscope. Also note that it is possible that två different cells both have a certain component, but
+you are only able to see it in one of them.
+
+\section*{Output}
+For each query, you should print a line containing the answer.
+
+\begin{itemize}
+  \item If the cell type can be decided unambiguously, print the \textit{index} $1 \leq i \leq N$ of the type the cell
+  \item If there, are multiple possibilites, you should print ``\texttt{vet ej}'' (don't know).
+  \item If there are no matching cell types, you should print ``\texttt{finns ej}'' (doesn't exist).
+\end{itemize}
+
+\section*{Points}
+Your solution will be tested on several test case groups.
+To get the points for a group, it must pass all the test cases in the group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Point value} & \textbf{Constraints} \\ \hline
+  $1$     & $15$         & $ K \le 8$, $N, Q \leq 10$\\ \hline
+  $2$     & $30$         & $ N, Q \leq 1000$\\ \hline
+  $3$     & $55$         & No further constraints.\\ \hline
+\end{tabular}
+
