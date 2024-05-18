@@ -17,7 +17,7 @@ sample 1
 sample 2
 sample 3
 
-group line 12
+group 1-line 12
 limits nMax=100000
 tc line_01 gen_line n=2 m=2 k=1
 tc line_02 gen_line n=3 m=2 k=2
@@ -29,7 +29,7 @@ tc line_07 gen_line n=100000 m=77777 k=22225
 tc line_08 gen_line n=99977 m=48999 k=45678
 tc line_09 gen_line n=99977 m=311 k=45678
 
-group small 16
+group 2-small 16
 limits nMax=10
 tc 1
 tc 2
@@ -46,9 +46,9 @@ tc small_09 gen_random n=10 m=10 nonleaf=1
 tc small_10 gen_line n=10 m=3 k=5
 tc small_11 gen_antigreedy n=10
 
-group medium 20
+group 3-medium 20
 limits nMax=200
-include_group small
+include_group 2-small
 
 tc medium_01 gen_random n=15 m=2
 tc medium_02 gen_random n=37 m=11
@@ -67,7 +67,7 @@ tc medium_14 gen_random n=200 m=196 width=2 leaf=1
 tc medium_15 gen_line n=200 m=187 k=8
 tc medium_16 gen_staircase n=200 m=193 k=1
 
-group n_equals_m 17
+group 4-n_equals_m 17
 limits nMax=100000
 
 tc nm_01 gen_random n=3 m=3
@@ -85,12 +85,12 @@ tc nm_12 gen_line n=100000 m=100000 k=99999
 tc nm_13 gen_star n=100000 m=100000 k=75754
 tc nm_14 gen_staircase n=100000 m=100000 k=2
 
-group large 35
+group 5-large 35
 limits nMax=100000
 
-include_group medium
-include_group line
-include_group n_equals_m
+include_group 3-medium
+include_group 1-line
+include_group 4-n_equals_m
 
 tc large_01 gen_random n=333 m=99
 tc large_02 gen_random n=4444 m=1000
