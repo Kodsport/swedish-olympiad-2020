@@ -16,7 +16,7 @@ sample 3
 
 group g1 20
 limits maxn=10 maxk=5 maxm=0
-tc 2
+tc 1
 tc_manual g1
 for n in {2..10};
 do
@@ -45,7 +45,7 @@ tc g2-rand-08 gen_random maxn=10 maxk=5
 group g3 20
 limits maxm=1
 include_group g1
-tc 2
+tc 1
 tc_manual g4
 tc g3-rand-01 gen_random maxm=1 
 tc g3-rand-02 gen_random maxm=1
