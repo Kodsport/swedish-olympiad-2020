@@ -6,4 +6,4 @@ type: scoring
 grading:
     show_test_data_groups: yes
 limits:
-    time_multiplier: 7
+    time_multiplier: 5 # We only have C++ solutions, but we don't want to let SIMD solutions pass
