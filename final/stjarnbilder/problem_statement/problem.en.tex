@@ -1,0 +1,38 @@
+\problemname{Constellations}
+In a galaxy far, far away, Pletiapan, as a step in his evil plan to take over the entire galaxy, has introduced customs fees for all spaceships passing above Treant Duck Lake.
+Now he has learned that a group of smugglers, led by the infamous Nola Sho, has found a way to get around his state-of-the-art scanner system.
+But fear not! Pletiapan naturally has a plan for how to catch the sneaky smugglers, a plan that can only succeed with your help.
+In the basement he has an old analog camera, and if you use it to take two pictures of the sky, you can then compare them to determine the minimum number of spaceships that must be passing over Treant Duck Lake.
+If that number is more than what has been reported for customs, then something fishy must be going on, and since nobody can remember the last time something fishy happened without Nola Sho's involvement, it would practically be enough to put him away once and for all.
+
+Pletiapan will give you two pictures. Each picture contains $N$ bright points, and each point has an $x$- and a $y$-coordinate.
+A point is either a star or a spaceship, but you do not know which.
+You do know that each star has moved from $(x, y)$ to $(x + u, y + v)$ during the hour, for some integers $u$ and $v$ that are the same for all stars, but you do not know what $u$ and $v$ are.
+A spaceship, on the other hand, may have moved from any point to any other point. All stars/spaceships in one picture also appear in the other.
+
+How many spaceships can you be certain exist in the pictures?
+
+\section*{Input}
+The first line contains an integer $N$ ($1 \leq N \leq 1000$), the number of points per picture.
+
+The following $N$ lines contain two integers $x_i$ and $y_i$ ($-10^6 \leq x_i, y_i \leq 10^6$), the $x$- and $y$-coordinates of point number $i$ in the first picture.
+
+After that follow another $N$ lines with two integers $X_i$ and $Y_i$ ($-10^6 \leq X_i, Y_i \leq 10^6$), the $x$- and $y$-coordinates of point number $i$ in the second picture.
+
+All points within the same picture are unique.
+
+\section*{Output}
+Print a line with an integer, the minimum number of spaceships that must exist in the pictures.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+$1$   & $24$       & There is at most $1$ spaceship. \\ \hline
+$2$   & $39$       & $N \leq 200$ \\ \hline
+$3$   & $37$       & No additional constraints. \\ \hline
+\end{tabular}

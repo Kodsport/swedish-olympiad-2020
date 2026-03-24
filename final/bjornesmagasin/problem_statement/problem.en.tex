@@ -1,0 +1,52 @@
+\problemname{Björne's Store}
+As is well known, bears hibernate during the winter. But at the equator it does not get dark and cold during the winter,
+so ever since a bear family moved south many years ago, the bears in the bear community that arose
+have started hibernating at completely different times of the year.
+Björne has opened a store and is worried about thieves during the part of the year when he is asleep.
+He therefore needs to hire other bears so that there is always someone employed who is awake and can guard the store.
+
+In total, $N$ bears have applied for the job.
+Each bear goes into hibernation on a certain day of the year to sleep for exactly $d$ consecutive days, and cannot work during any of these days.
+How many bears does Björne need to hire at minimum, given that Björne will guard his store himself when he is awake?
+
+Assume that every year has $365$ days (bears living at the equator do not care about leap years), and that:
+\begin{enumerate}
+  \item January has 31 days,
+  \item February has 28 days,
+  \item March has 31 days,
+  \item April has 30 days,
+  \item May has 31 days,
+  \item June has 30 days,
+  \item July has 31 days,
+  \item August has 31 days,
+  \item September has 30 days,
+  \item October has 31 days,
+  \item November has 30 days, and
+  \item December has 31 days.
+\end{enumerate}
+
+\section*{Input}
+The first line contains two integers $N$ and $d$ ($2 \leq N \leq 10^5$, $1 \leq d \leq 364$), the number of bears (including Björne),
+and the number of days each bear sleeps.
+
+The following $N$ lines contain the days when each bear goes into hibernation. They are given in the format \texttt{dd/mm}.
+
+The first bear listed is Björne himself.
+
+\section*{Output}
+Print a line with an integer, the minimum number of bears that Björne must hire.
+
+If it is not possible to guard the store every day, print \texttt{-1}.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+$1$   & $30$       & $N \leq 15$ \\ \hline
+$2$   & $40$       & $d \leq 182$ \\ \hline
+$3$   & $30$       & No additional constraints. \\ \hline
+\end{tabular}

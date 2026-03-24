@@ -1,0 +1,45 @@
+\problemname{Birds in a Tree}
+Winter has arrived and the waxwings have started flying south in search of food. The waxwing Siri is the leader of a
+flock consisting of $M$ birds. The flock is heading towards a rowan berry tree that they visit every year. The tree is a graph consisting of $N$ nodes
+and $N-1$ edges connecting certain pairs of nodes. Over the years, Siri has discovered that the node with index $K$ has extra
+many rowan berries, and she therefore wants to make sure that the flock lands in a way that places her on node $K$.
+But just like when humans sit down at a table, waxwings have certain social rules they must follow when
+landing in a rowan berry tree:
+
+\begin{enumerate}
+\item The birds land one by one in the tree, each on its own node. The order in which they land is predetermined, and Siri always lands
+last since she is the leader.
+\item The first bird can land on any node, but each subsequent bird must land on a node that
+is adjacent to the most recently landed bird, among those where it is possible to land next to.
+\end{enumerate}
+
+For example, if the first three birds have landed, then the fourth bird must land next to the third one if possible. If that
+is not possible, then it must land next to the second bird if possible, and so on.
+
+Your task is to find a way for the birds to land that satisfies the requirements and places Siri on node number $K$.
+
+\section*{Input}
+The first line contains three integers $N$, $M$, and $K$ ($2 \leq M \leq N \leq 10^5$, $1 \leq K \leq N$).
+The following $N-1$ lines each contain two integers $u$ and $v$ ($1 \leq u,v \leq N$), meaning that the nodes with
+indices $u$ and $v$ are connected by an edge.
+It is guaranteed that the graph is a tree, i.e., it is connected and has no cycles.
+
+\section*{Output}
+If there is no solution, print $-1$. Otherwise, print a line with $M$ integers, where the $i$-th number
+is the index of the node that the $i$-th bird should land on. If there are multiple solutions, you may print any of
+them.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+$1$   & $12$       & The graph is a line, i.e., node $i$ is connected to node $i+1$ for all $i < N$. \\ \hline
+$2$   & $16$       & $N \leq 10$ \\ \hline
+$3$   & $20$       & $N \leq 200$ \\ \hline
+$4$   & $17$       & $N = M$ \\ \hline
+$5$   & $35$       & No additional constraints. \\ \hline
+\end{tabular}

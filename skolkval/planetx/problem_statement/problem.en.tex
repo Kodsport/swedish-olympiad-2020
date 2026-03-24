@@ -1,0 +1,47 @@
+\problemname{Planet X}
+The year is 2109 and a group of scientists has just discovered ``Planet X'',
+a previously unknown planet here in our own solar system,
+beyond Pluto's orbit. The research group immediately sends out
+a probe to take measurements, and shortly after they receive measurement data.
+
+The scientists are specifically interested in what the surface of Planet X looks like.
+We represent the surface as an $N \times M$ grid, where each cell
+has a height between $0$ and $9$.
+
+A measuring instrument on the probe has managed to measure the specific height
+of some, but not all, cells. From the chemical composition of the surface, we know that it is not
+very steep on the planet: the height between two
+adjacent cells (cells that share an edge) can never differ
+by more than one.
+
+Now the scientists need your help to extract as much information
+from this data as possible. More precisely, they want you, given the heights
+of some of the cells, to find the heights of all other cells that can be uniquely determined.
+
+\section*{Input}
+The first line contains two integers $1 \le N,M \le 10$,
+the number of rows and the number of columns of the grid respectively.
+Then follow $N$ lines with $M$ characters each.
+The $j$-th character on line $i$ is a \texttt{.} if
+no value for this cell exists, and is a digit between
+$0$ and $9$ corresponding to the height of the cell otherwise.
+
+At least one cell contains a digit.
+
+\section*{Output}
+The program should print $N$ lines with $M$ characters each:
+the grid as it looks after
+correct heights have been filled in for all cells where the height can be determined.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $20$        &  $N = 1$\\ \hline
+  $2$    & $20$        &  $1 \leq M \cdot N \leq 8$\\ \hline
+  $3$    & $60$        &  No additional constraints. \\ \hline
+\end{tabular}

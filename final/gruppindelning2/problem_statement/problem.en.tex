@@ -1,0 +1,55 @@
+\problemname{Group Division}
+Math teacher Maria is going to divide her students into two groups during the next lesson.
+She is therefore now faced with a common problem: how do you divide students into two groups in a sensible way?
+There are $n$ students in the class, and the classroom has $n$ chairs, numbered from $1$ to $n$.
+When a student arrives in the classroom, they always sit on the leftmost empty chair.
+So if a total of $k$ students show up on a certain day, they will always sit on chairs $1,2,...,k$.
+
+To divide the students into two groups, Maria has a certain strategy she wants to use.
+Before the lesson begins, she chooses a sequence $s$ of $n$ ones and twos.
+Once the lesson has started, she goes to each student and assigns the student sitting on chair $i$ to group $s_i$.
+For the group division to be sensible, there are two requirements that $s$ must satisfy:
+
+\begin{enumerate}
+  \item Maria does not know how many students will come, but regardless of how many show up, the difference in size between the two groups must be at most $1$.
+
+  \item There are $m$ pairs of chairs that have the same color. If students are sitting on such a pair of chairs, they must end up in the same group.
+\end{enumerate}
+
+Your task is, given $n,m$ and the $m$ pairs of chairs, to find the sequence $s$ that comes first in alphabetical order and satisfies the requirements above.
+If no valid $s$ exists, your program should print $-1$.
+
+By alphabetical order we mean that two sequences are compared by primarily looking at the first element; if they are the same, the second element is compared, and so on.
+For example, the sequence \texttt{1122} comes before \texttt{1211}, but after \texttt{1112}.
+
+\section*{Input}
+The first line contains two integers $n$ and $m$ ($1\leq n \leq 10^5$, $0 \leq m \leq \frac{n}{2}$), the number of chairs in the classroom and the number of pairs of chairs with the same color.
+Then follow $m$ lines each containing two integers $s_{1}, s_{2}$ ($1 \leq s_{1}, s_{2} \leq N$, $s_{1} \neq s_{2}$), meaning that chairs $s_{1}$ and $s_{2}$ have the same color.
+Each chair has the same color as at most one other chair.
+
+\section*{Output}
+Print a sequence of $n$ ones or twos (without spaces), or $-1$ if no valid solution exists.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$     & $12$         & $n \leq 15$\\ \hline
+  $2$     & $23$         & $n \leq 40$ \\ \hline
+  $3$     & $25$         & Chair $i$ can only have the same color as chair $i\pm 1$. \\ \hline
+  $4$     & $40$         & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Sample 1}
+If only two people come, they must be in different groups.
+Thus chairs $1$ and $2$ must be in different groups, but we also know that chair $3$
+must be in the same group as chair $2$. If four people come, then chair $4$
+must be in the same group as chair $1$ for the groups to be equal in size. But chair $4$ must
+be in the same group as chair $5$. If we continue in this way, we get that chairs $1, 4$
+and $5$ must be in the same group, while chairs $2, 3, 6$ and $7$ are in the other group.
+There are thus two solutions: $1221122$ and $2112211$. The alphabetically smallest of
+these is $1221122$.

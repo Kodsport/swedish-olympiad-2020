@@ -1,0 +1,38 @@
+\problemname{The Cycling Race}
+You and your friends have formed a team to participate in a running race. The race has some special rules.
+You are allowed to use a bicycle, but only one per team. The team members can thus take turns using the bicycle, and can
+at any time jump off it so that those coming behind can use it instead. The bicycle is not allowed to travel backwards.
+
+The time for a team is measured when the last member crosses the finish line. Your team has $N$ people. Person number $i$ runs at a
+constant speed of $s_i$ meters/second, and cycles at a constant speed of $c_i$ meters/second. The race is $L$ meters long.
+How quickly can you finish, if you use the bicycle optimally?
+
+\section*{Input}
+The first line contains the two integers $N$ and $L$ ($2 \leq N \leq 10$, $1 \leq L \leq 10^5$).
+
+The $N$ following lines describe the people in the team, where the $i$-th line contains the integers $s_i$ and $c_i$ ($1 \leq s_i, c_i \leq 100$).
+
+\section*{Output}
+The program should print a decimal number: the minimum time the team can finish in (in seconds).
+The answer is considered correct if it differs from the correct answer by at most $10^{-2}$.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $20$        &  $N = 2$ \\ \hline
+  $2$    & $20$        &  All $s_i$ are the same, and all $c_i$ are the same \\ \hline
+  $3$    & $60$        &  No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Samples}
+In the first sample, one solution is to let person 1 cycle the first $8$ meters, and then run the rest. Person number $2$
+can then run the first $8$ meters and then cycle the last part. Person number $3$ runs the entire way. Note that person number $3$ has
+a higher running speed than cycling speed.
+
+In the second sample, the team consists of an elite runner, an elite cyclist, a PO organizer, and an ostrich. The solution is based on letting the PO organizer
+cycle for a large part of the time.

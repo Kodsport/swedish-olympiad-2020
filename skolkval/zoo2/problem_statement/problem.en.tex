@@ -1,0 +1,33 @@
+\problemname{Zoo}
+Esmeralda is building a zoo with $N$ cages in a long row.
+Each cage will be filled with an animal. She has $K$ different animal species to choose from, which we call \texttt{A}, \texttt{B}, \texttt{C}, etc. She can have multiple cages with the same species, but not right next to each other. Furthermore, she knows that certain animals do not get along well. More precisely, there are $M$ ``quarrelsome groups'' of animal species, and Esmeralda does not want to place two animals from the same quarrelsome group in adjacent cages. In how many ways can Esmeralda place animals in the cages?
+
+\section*{Input}
+The first line contains three integers $N$ ($2 \le N \le 15$), $K$ ($2 \le K \le 10$) and $M$ ($0 \le M \le 5$): the number of cages, the number of animal species, and the number of quarrelsome groups.
+
+On each of the following $M$ lines there is a string consisting of between $2$ and $K$ letters: a quarrelsome group of animal species that pairwise do not tolerate each other.
+Only the first $K$ letters of the alphabet (and only uppercase) can appear in the strings, and a letter does not appear more than once in the same string.
+
+The input will always be such that the answer never exceeds 2 billion.
+
+\section*{Output}
+The program should print an integer, the number of ways Esmeralda can place animals.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $20$        &  $N \le 10$, $K \le 5$, $M=0$\\ \hline
+  $2$    & $40$        &  $N \le 10$, $K \le 5$ \\ \hline
+  $3$    & $20$        &  $M \le 1$ \\ \hline
+  $4$    & $20$        &  No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Samples}
+In the first sample, all species get along. In the first cage, Esmeralda can choose between 4 species. For the second and third cages there are three possibilities each, since the species cannot be the same as in the preceding cage. In total there are $4\cdot 3\cdot 3=36$ possible placements.
+
+In the second sample, we know that Baboon and Elephant cannot be adjacent. We also know that Baboon, Antelope, Dingo, and Citrus Swallowtail are all enemies, and none of these can therefore be placed next to each other. Esmeralda must thus put an elephant in every other cage and choose freely between antelope, dingo, and citrus swallowtail in the rest. This gives 9 possibilities if she starts with an elephant and 9 possibilities if she starts with one of the other animals.
