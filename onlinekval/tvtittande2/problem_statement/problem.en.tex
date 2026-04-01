@@ -1,0 +1,35 @@
+\problemname{TV Watching}
+Bob's friends love TV series and often discuss them at their birthday parties. Bob often feels left out because he has not watched the same series as them.
+
+Bob is invited to parties on certain days and plans to attend all of them. He knows which TV series will be discussed at each party, and wants to have finished watching those series in order to discuss them with his friends. Bob does not want to watch TV for more than ten hours per day, and he does not have time to watch TV on the same day he is at a party.
+
+He can pause a TV series at any time and continue watching it another time, but when he is at a party where a series is discussed, he must have finished watching it in its entirety. Can Bob manage this?
+
+\section*{Input}
+The first line contains the two integers $n$ and $k$ ($1 \leq n,k \leq 2 \cdot 10^5$), the number of parties and the number of TV series that exist. The TV series are numbered from $1$ to $k$.
+
+The next line contains $k$ integers, where the $i$-th number is the length of TV series number $i$ measured in hours. No series is longer than $10^6$ hours.
+
+The following $n$ lines describe the parties in order. Line $i$ starts with two integers $1 \leq d_i \leq 2 \cdot 10^5$ and $c_i \ge 1$, the day of the party and the number of TV series that will be discussed. Then follow $c_i$ distinct integers on the same line, the TV series that will be discussed at the party. The sum of all $c_i$ is at most $2 \cdot 10^5$.
+
+Bob is not invited to more than one party on any day. It is now morning of day $0$ and Bob is not going to a party today.
+
+\section*{Output}
+Print \texttt{Ja} if it is possible to finish watching the TV series in time for the events where they are discussed. Print \texttt{Nej} if it is not possible.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+    $1$   & $40$     & $n \leq 50$, $k \leq 50$ \\ \hline
+    $2$   & $20$     & $n \leq 3000$, $k \leq 3000$ \\ \hline
+    $3$   & $40$     & No additional constraints. \\ \hline
+\end{tabular}
+
+
+\section*{Explanation of Sample 1}
+The first party is in two days, and the 20-hour long TV series will be discussed there. Since Bob plans to watch TV for ten hours per day, he just barely manages to finish it in time. Then he gets one free day until the next party so he just barely manages to watch series 3 and 4 at five hours each. On the fifth day, it suffices for Bob to watch series 1 since he has already watched series 2.

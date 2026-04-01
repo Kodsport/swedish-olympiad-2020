@@ -1,0 +1,37 @@
+\problemname{The Locksmith}
+The locksmith Lårs has been put in charge of distributing keys to the locks in Mathland. The country has $N$ locks, numbered $1,2,\ldots,N$. Each resident has their own key that opens certain (those that the resident has the right to open) of the locks in the country.
+
+Each time a person moves to the country, Lårs gives them a key consisting of two numbers $a,b$. The person can then open all locks with number $m$ satisfying $m\equiv a \pmod{b}$\footnote{Here $\equiv$ denotes congruence. Two numbers $x,y$ are said to be congruent modulo $n$, written $x\equiv y \pmod{n}$, if $n|(x-y)$, i.e., $x-y$ is evenly divisible by $n$. This is the same as $x$ and $y$ having the same remainder when divided by $n$. In most programming languages it can be written as $x\%n==y\%n$}. When a person moves away from the country, Lårs takes back their key.
+
+There are three types of events that Lårs, in his capacity as lock administrator, needs to handle: answering the question of whether any resident can open a specific lock, someone moving to the country, and someone moving away from the country. For each question about whether anyone can open a specific lock, Lårs should answer ``yes'' or ``no''. Initially, nobody lives in the country.
+
+\section*{Input}
+The first line contains two integers $N,Q$ ($1\leq N,Q \leq 2\cdot 10^5$), the number of locks and the number of events.
+
+Then follow $Q$ lines in one of the following forms:
+\begin{itemize}
+  \item $1\enspace x$, a question about whether any resident can open lock $x$ ($1\leq x \leq N$).
+  \item $2\enspace a\enspace b$, someone moves to the country and receives key $a,b$ as described above ($0\leq a < b \leq N$).
+  \item $3\enspace a\enspace b$, someone with key $a,b$ moves away from the country and Lårs takes back their key. It is guaranteed that a person with key $a,b$ has previously moved to the country ($0\leq a < b \leq N$).
+\end{itemize}
+
+\section*{Output}
+For each question about whether anyone can unlock a specific lock (first number is $1$), print ``\texttt{ja}'' if the lock can be opened by some resident currently living in the country, or ``\texttt{nej}'' if the lock cannot be opened.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+$1$    & $25$         & The number of events where someone tries to open a lock is $\leq 20$. \\ \hline
+$2$    & $30$         & Nobody moves away from the country, and everyone chooses different $b$. \\ \hline
+$3$    & $45$         & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Samples}
+In the first sample, initially there is no key, so lock $7$ cannot be opened. Then a key is added that opens all integers $m$ satisfying $m\equiv 1 \pmod{3}$, and then lock $7$ can be opened. Finally, the key is removed, and lock $7$ can no longer be opened.
+
+In the second sample, two identical keys are distributed. When one of them is taken back, lock $7$ can still be opened (all identical keys are thus \underline{not} taken back at the same time).

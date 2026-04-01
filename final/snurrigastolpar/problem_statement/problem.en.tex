@@ -1,0 +1,49 @@
+\problemname{Spinning Poles}
+\textit{NOTE!!! This problem is not about the same kind of poles as in Group Division}
+
+Your flying carpet has started malfunctioning! As long as it is empty, everything is fine, and it can
+fly anywhere in the plane without problems. But as soon as it is loaded with something, such as magical oil lamps,
+it can no longer turn on its own, but must turn at so-called spinning poles. Since
+the spinning poles can only rotate counterclockwise 90 degrees at a time, the carpet can also only turn exactly
+90 degrees counterclockwise at each turn. Moreover, it overheats so quickly that it leaves a burning
+trail behind it as soon as it is loaded with something. Therefore, it also cannot turn multiple times at
+the same pole, as that would take so long that it would burn up. It also cannot cross its own path or
+visit a pole it has already been to.
+
+And of course it is right now, when the carpet is in worse shape than ever, that you need it the most.
+Rafaj has scattered all of the sultan's magical oil lamps on the city's spinning poles.
+You must now collect as many oil lamps as possible before someone accidentally releases the genies and
+disaster strikes.
+
+In the plane there are $n$ spinning poles with integer coordinates and on each pole there is now a magical oil lamp.
+You want to visit as many poles as possible with the flying carpet, by moving in the following way:
+\begin{itemize}
+  \item You may start at any pole, since the carpet can fly freely when empty
+  \item You may only move up/down/left/right
+  \item You may only turn at poles, and only 90 degrees counterclockwise (so you cannot turn clockwise or reverse direction, but you can continue straight ahead)
+  \item Your path may not cross itself, or visit a pole more than once, as the carpet would burn up
+\end{itemize}
+How many poles can you visit?
+
+\section*{Input}
+The first line contains an integer $n$ ($1 \leq n \leq 1000$).
+Then follow $n$ lines. The $i$-th line contains two positive integers
+$x_{i}, y_{i}$ ($1 \leq x_{i}, y_{i} \leq 10^9$), the coordinates of the $i$-th pole.
+No two poles will ever be at the same position.
+
+\section*{Output}
+Print a line with an integer, the largest number of poles you can visit.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+$1$   & $19$       & $n \leq 25, x_{i}, y_{i} \leq 5$ \\ \hline
+$2$   & $16$       & $n \leq 80, x_{i}, y_{i} \leq 80$ \\ \hline
+$3$   & $20$       & $n \leq 80$ \\ \hline
+$4$   & $45$       & No additional constraints. \\ \hline
+\end{tabular}

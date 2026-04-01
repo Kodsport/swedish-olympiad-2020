@@ -1,0 +1,43 @@
+\problemname{Tea Brewing}
+Egon is going to brew lots of tea for $N$ programming olympiad participants.
+He has $K$ tea bags, all of different kinds.
+Bag $i$ has tea for $x_i$ people.
+It is guaranteed that the bags together are enough for at least $N$ people.
+
+Egon plans to use brewing pots that hold tea for a maximum of 10 people.
+Since the bags are of different kinds,
+it is not possible to mix multiple bags in the same pot.
+However, the same bag can be used for multiple pots.
+How many pots must Egon use?
+
+\section*{Input}
+The first line contains two integers $K$ and $N$ ($1 \le K \le 10$, $1 \le N \le 100$), the number of tea bags Egon has and the number of programming olympiad participants.
+
+The second line contains the $K$ integers $x_i$ ($1 \le x_i \le 100$), the number of people each bag is enough for.
+
+It is guaranteed that the tea bags are always enough for $N$ people.
+
+\section*{Output}
+The program should print an integer: the minimum number of tea pots Egon must use.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+  $1$    & $20$        &  $K = 1$\\ \hline
+  $2$    & $80$        &  No additional constraints. \\ \hline
+\end{tabular}
+
+
+\section*{Explanation of Samples}
+In the first sample, Egon chooses to brew two pots with the first tea bag and two pots with the third tea bag.
+This gives $20+17$ cups of tea, which
+is enough for the $36$ participants.
+
+In the second sample, the optimal solution is to brew six pots with the first tea bag,
+three pots with the third tea bag, and two with the fourth tea bag.
+This gives $54+30+16$ cups of tea, which is enough for the $100$ participants.

@@ -1,0 +1,63 @@
+\problemname{Password Paranoia}
+
+Agent August has a problem that he needs your help with. August has two email addresses that he uses
+to communicate with his agent colleagues. But he suspects that an unknown person has for some time been
+monitoring every keystroke he makes. Among other things, this person by now knows the two passwords
+that August uses for the email addresses.
+
+The two passwords $s_1$ and $s_2$ are text strings consisting of the letters ``\texttt{a}''-``\texttt{z}''. The two passwords are entered
+into two different text fields, with maximum length $l_1$ and $l_2$ respectively. The maximum length of a text field is a positive integer
+that determines how many letters can be in the text field. If you press a letter, that letter is appended to the end
+of the text field, except if the number of letters in the text field equals the maximum length, in which case nothing happens.
+
+To cause confusion, August would like a sequence of keystrokes that results in $s_1$ ending up
+in the first text field and $s_2$ ending up in the second. This way, the unknown observer cannot know which
+email address August is using. Your task is to construct such a sequence. There are $27$ keys you can use,
+the letters ``\texttt{a}''-``\texttt{z}'' and ``\texttt{<}'' (backspace). If backspace is pressed, the last letter in the field
+is removed (if there is at least one letter in the field, otherwise nothing happens).
+
+For full points, you must find a sequence containing as few characters as possible. In some test groups, you only
+need to find a sequence with at most $10^6$ characters.
+
+
+\section*{Input}
+The first line contains an integer $K \in \{0, 1\}$, indicating whether you need to find a shortest solution.
+If $K = 1$ you must find a shortest solution, otherwise it suffices for it to have at most $10^6$ characters.
+
+The first line contains a string $s_1$ and an integer $l_1$ ($1 \leq |s_1| \leq l_1 \leq 1000$).
+
+The second line contains a string $s_2$ and an integer $l_2$ ($1 \leq |s_2| \leq l_2 \leq 1000$).
+
+Both $s_1$ and $s_2$ contain only lowercase letters from ``\texttt{a}'' to ``\texttt{z}''.
+
+\section*{Output}
+If there is no sequence of keystrokes as described in the problem, print an exclamation mark ``\texttt{!}''.
+
+Otherwise, print a string consisting of the characters ``\texttt{a}''-``\texttt{z}'' and ``\texttt{<}'', the sequence you found. If there
+are multiple solutions, you may print any of them. If $K = 1$, the sequence must be as short as possible,
+otherwise it suffices for it to have at most $10^6$ characters. It is guaranteed that if a solution exists,
+there is one with at most $10^6$ characters.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+\textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+$1$   & $7$        & The passwords consist only of the letter ``\texttt{a}'', and $K = 0$. \\ \hline
+$2$   & $30$       & $K = 0$ \\ \hline
+$3$   & $11$       & The passwords consist only of the letters ``\texttt{a}'' and ``\texttt{b}'', and $l_1, l_2 \leq 5$. \\ \hline
+$4$   & $15$       & $l_1, l_2 \leq 50$ \\ \hline
+$5$   & $17$       & $l_1, l_2 \leq 200$ \\ \hline
+$6$   & $20$       & No additional constraints. \\ \hline
+\end{tabular}
+
+\section*{Explanation of Sample 1}
+When the first character ``\texttt{<}'' is pressed, nothing happens since there is nothing in the fields. After the following
+four keystrokes, there will be ``\texttt{bara}'' in the second field just as we want, but there will be ``\texttt{bar}''
+in the first field since it has maximum length $3$. Then the last two letters are deleted so that the first
+field contains ``\texttt{b}'' and the second contains ``\texttt{ba}''. Finally, ``\texttt{ra}'' is typed so that the fields contain ``\texttt{bra}'' and ``\texttt{bara}''. Note
+that since the first character is entirely unnecessary, it would have been possible to solve it with a shorter sequence, but that is fine
+since $K = 0$.

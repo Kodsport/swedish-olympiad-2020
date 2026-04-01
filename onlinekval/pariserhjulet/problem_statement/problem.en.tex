@@ -1,0 +1,54 @@
+\problemname{The Ferris Wheel}
+\illustration{0.3}{image}{Singapore Flyer \newline © CEphoto, Uwe Aranas}%
+%
+After following a very well-optimized route through the airport, the Swedish team has finally arrived at IOI in Singapore.
+During the first excursion, all $N$ teams at IOI get to ride the giant Ferris wheel Singapore Flyer.
+The Ferris wheel has $M$ gondolas and it also takes $M$ minutes for the wheel to complete one revolution
+(so it takes 1 minute for each gondola to move one step).
+
+Some teams seem to be more interested in riding the Ferris wheel than others, and therefore each team gets to decide exactly how many revolutions they want to ride.
+It would be boring for the participants if they had to get off and then back on before completing all their revolutions.
+It has therefore been decided that once a team has sat down in a gondola, that team may remain in the gondola until they have completed all their revolutions.
+This means that if the wheel turns so that a gondola reaches the entrance, but a team is already sitting in that gondola and wants to continue riding,
+the next team cannot enter that gondola. This team must then wait for an empty gondola or a gondola with a team that is getting off.
+
+The teams are very efficient at getting in and out of the gondolas, so it takes no extra time to switch teams in the bottom gondola.
+
+All teams are currently queuing in front of the Ferris wheel, and the Swedish team wonders how long it will take before everyone has had their ride.
+
+\section*{Input}
+The first line contains the integers $N$ and $M$ ($1 \leq N,M \leq 2 \cdot 10^5$),
+the number of teams and the number of gondolas in the Ferris wheel.
+
+The second line contains $N$ integers $T_1, \dots , T_N$ ($1 \leq T_i \leq 10^9$), where $T_i$ is the number of revolutions team
+number $i$ wants to ride. The teams are ordered by their place in the queue, where $T_1$ is the first team in the queue.
+
+\section*{Output}
+Print a line with an integer, the number of minutes it will take for all teams to ride.
+
+\section*{Scoring}
+Your solution will be tested on a set of test groups.
+To earn points for a group, you must pass all test cases in that group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  \textbf{Group} & \textbf{Points} & \textbf{Constraints} \\ \hline
+    $1$   & $20$     & $1 \leq N, M, T_i \leq 100$ \\ \hline
+    $2$   & $30$     & $1 \leq N, M, T_i \leq 1000$ \\ \hline
+    $3$   & $25$     & $1 \leq N, M \leq 1000$ \\ \hline
+    $4$   & $25$     & No additional constraints. \\ \hline
+\end{tabular}
+
+
+\section*{Explanation of Samples}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{sample1}
+\caption{Sample 1}
+\end{figure}
+
+In sample $1$ there are $4$ teams and $3$ gondolas.
+The teams, which in the picture are Sweden, Norway, Finland and Denmark, want to ride $2$, $2$, $1$ and $1$ revolutions respectively.
+Note that the Danish team cannot enter the Ferris wheel at $t=3$ or $t=4$
+because the Swedish / Norwegian team is already sitting in the bottom gondola and in both cases wants to ride one more revolution.
